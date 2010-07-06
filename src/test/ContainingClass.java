@@ -1,0 +1,76 @@
+package test;
+
+import ecologylab.xml.ElementState;
+import ecologylab.xml.TranslationScope;
+import ecologylab.xml.XMLTranslationException;
+
+public class ContainingClass extends ElementState
+{
+	@xml_classes({BaseClass.class, ChildClass1.class, ChildClass2.class})
+	@xml_nested
+	BaseClass theField;
+	
+	public ContainingClass()
+	{
+	}
+	
+	public static void main(String[] args) throws XMLTranslationException 
+	{
+//		ContainingClass cc = new ContainingClass();
+//		
+//		StringBuilder test = new StringBuilder();
+//		cc.translateToXML(test);
+//		
+//		ContainingClass ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test, TranslationScope.get("test", ContainingClass.class, ChildClass1.class, ChildClass2.class, BaseClass.class));
+//		
+//		ccoutput.translateToXML(System.out);
+		
+		TranslationScope translationSpace = TranslationScope.get("test", ContainingClass.class, ChildClass1.class, ChildClass2.class, BaseClass.class);
+		
+		ContainingClass ccb = new ContainingClass();
+		ccb.theField = new BaseClass();
+		
+		ContainingClass cc1 = new ContainingClass();
+		cc1.theField = new ChildClass1();
+		
+		ContainingClass cc2 = new ContainingClass();
+		cc2.theField = new ChildClass2();
+		
+		StringBuilder test = new StringBuilder();
+
+		System.out.println("base");
+
+		test.delete(0, test.length());
+		ccb.translateToXML(test);
+		
+		String test1 = "<containing_class><the_field other_tag_var=\"3\"/></containing_class>";
+//		String test1 = "<containing_class><fred new_tag_var=\"3\"/></containing_class>";
+
+		ContainingClass ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test1, translationSpace);
+		
+		System.out.println(test1);
+		System.out.println(ccoutput.translateToXML());
+		
+		System.out.println();
+		
+		System.out.println("child1");
+		test.delete(0, test.length());
+		cc1.translateToXML(test);
+		
+		ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test, translationSpace);
+
+		System.out.println(test);
+		System.out.println(ccoutput.translateToXML());
+
+		System.out.println();
+		
+		System.out.println("child2");
+		test.delete(0, test.length());
+		cc2.translateToXML(test);
+
+		ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test, translationSpace);
+
+		System.out.println(test);
+		System.out.println(ccoutput.translateToXML());
+	}
+}
