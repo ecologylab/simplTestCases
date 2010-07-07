@@ -6,8 +6,8 @@ import ecologylab.xml.XMLTranslationException;
 
 public class ContainingClass extends ElementState
 {
-	@xml_classes({BaseClass.class, ChildClass1.class, ChildClass2.class})
-	@xml_nested
+	@simpl_classes({BaseClass.class, ChildClass1.class, ChildClass2.class})
+	@simpl_composite
 	BaseClass theField;
 	
 	public ContainingClass()
@@ -41,7 +41,7 @@ public class ContainingClass extends ElementState
 		System.out.println("base");
 
 		test.delete(0, test.length());
-		ccb.translateToXML(test);
+		ccb.serialize(test);
 		
 		String test1 = "<containing_class><the_field other_tag_var=\"3\"/></containing_class>";
 //		String test1 = "<containing_class><fred new_tag_var=\"3\"/></containing_class>";
@@ -49,28 +49,28 @@ public class ContainingClass extends ElementState
 		ContainingClass ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test1, translationSpace);
 		
 		System.out.println(test1);
-		System.out.println(ccoutput.translateToXML());
+		System.out.println(ccoutput.serialize());
 		
 		System.out.println();
 		
 		System.out.println("child1");
 		test.delete(0, test.length());
-		cc1.translateToXML(test);
+		cc1.serialize(test);
 		
 		ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test, translationSpace);
 
 		System.out.println(test);
-		System.out.println(ccoutput.translateToXML());
+		System.out.println(ccoutput.serialize());
 
 		System.out.println();
 		
 		System.out.println("child2");
 		test.delete(0, test.length());
-		cc2.translateToXML(test);
+		cc2.serialize(test);
 
 		ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test, translationSpace);
 
 		System.out.println(test);
-		System.out.println(ccoutput.translateToXML());
+		System.out.println(ccoutput.serialize());
 	}
 }
