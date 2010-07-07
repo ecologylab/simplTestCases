@@ -46,7 +46,7 @@ public class ContainingClass extends ElementState
 		String test1 = "<containing_class><the_field other_tag_var=\"3\"/></containing_class>";
 //		String test1 = "<containing_class><fred new_tag_var=\"3\"/></containing_class>";
 
-		ContainingClass ccoutput = (ContainingClass) TranslationScope.translateFromXMLCharSequence(test1, translationScope);
+		ContainingClass ccoutput = (ContainingClass) translationScope.deserializeCharSequence(test1);
 		
 		System.out.println(test1);
 		System.out.println(ccoutput.serialize());
@@ -57,7 +57,7 @@ public class ContainingClass extends ElementState
 		test.delete(0, test.length());
 		cc1.serialize(test);
 		
-		ccoutput = (ContainingClass) TranslationScope.translateFromXMLCharSequence(test, translationScope);
+		ccoutput = (ContainingClass) translationScope.deserializeCharSequence(test);
 
 		System.out.println(test);
 		System.out.println(ccoutput.serialize());
@@ -68,7 +68,7 @@ public class ContainingClass extends ElementState
 		test.delete(0, test.length());
 		cc2.serialize(test);
 
-		ccoutput = (ContainingClass) TranslationScope.translateFromXMLCharSequence(test, translationScope);
+		ccoutput = (ContainingClass) translationScope.deserializeCharSequence(test);
 
 		System.out.println(test);
 		System.out.println(ccoutput.serialize());
