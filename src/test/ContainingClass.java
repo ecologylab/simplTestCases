@@ -2,7 +2,7 @@ package test;
 
 import ecologylab.xml.ElementState;
 import ecologylab.xml.TranslationScope;
-import ecologylab.xml.XMLTranslationException;
+import ecologylab.xml.SIMPLTranslationException;
 
 public class ContainingClass extends ElementState
 {
@@ -14,7 +14,7 @@ public class ContainingClass extends ElementState
 	{
 	}
 	
-	public static void main(String[] args) throws XMLTranslationException 
+	public static void main(String[] args) throws SIMPLTranslationException 
 	{
 //		ContainingClass cc = new ContainingClass();
 //		
@@ -25,7 +25,7 @@ public class ContainingClass extends ElementState
 //		
 //		ccoutput.translateToXML(System.out);
 		
-		TranslationScope translationSpace = TranslationScope.get("test", ContainingClass.class, ChildClass1.class, ChildClass2.class, BaseClass.class);
+		TranslationScope translationScope = TranslationScope.get("test", ContainingClass.class, ChildClass1.class, ChildClass2.class, BaseClass.class);
 		
 		ContainingClass ccb = new ContainingClass();
 		ccb.theField = new BaseClass();
@@ -46,7 +46,7 @@ public class ContainingClass extends ElementState
 		String test1 = "<containing_class><the_field other_tag_var=\"3\"/></containing_class>";
 //		String test1 = "<containing_class><fred new_tag_var=\"3\"/></containing_class>";
 
-		ContainingClass ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test1, translationSpace);
+		ContainingClass ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test1, translationScope);
 		
 		System.out.println(test1);
 		System.out.println(ccoutput.serialize());
@@ -57,7 +57,7 @@ public class ContainingClass extends ElementState
 		test.delete(0, test.length());
 		cc1.serialize(test);
 		
-		ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test, translationSpace);
+		ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test, translationScope);
 
 		System.out.println(test);
 		System.out.println(ccoutput.serialize());
@@ -68,7 +68,7 @@ public class ContainingClass extends ElementState
 		test.delete(0, test.length());
 		cc2.serialize(test);
 
-		ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test, translationSpace);
+		ccoutput = (ContainingClass) ElementState.translateFromXMLCharSequence(test, translationScope);
 
 		System.out.println(test);
 		System.out.println(ccoutput.serialize());
