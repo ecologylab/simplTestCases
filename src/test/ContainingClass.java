@@ -1,8 +1,8 @@
 package test;
 
-import ecologylab.xml.ElementState;
-import ecologylab.xml.TranslationScope;
-import ecologylab.xml.SIMPLTranslationException;
+import ecologylab.serialization.ElementState;
+import ecologylab.serialization.SIMPLTranslationException;
+import ecologylab.serialization.TranslationScope;
 
 public class ContainingClass extends ElementState
 {

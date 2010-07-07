@@ -1,6 +1,6 @@
 package test;
 
-import ecologylab.xml.Hint;
+import ecologylab.serialization.Hint;
 
 public class ChildClass1 extends BaseClass
 {
