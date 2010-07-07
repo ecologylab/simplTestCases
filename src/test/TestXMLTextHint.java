@@ -17,8 +17,10 @@ public class TestXMLTextHint
   {
   	String descChunk = "<description kind=\"short\">A demo of the capabilities of the Swing Graphical User Interface.</description>";
   	
-  	Description descObj = (Description) TranslationScope.get("JNLPDesc", Description.class).deserializeCharSequence(descChunk);
+  	TranslationScope translationScope = TranslationScope.get("JNLPDesc", Description.class);
+		Description descObj = (Description) translationScope.deserializeCharSequence(descChunk);
   	
+  	System.out.println(descObj.getDesc());
   	System.out.println(descChunk);
   	descObj.serialize(System.out);
   }
