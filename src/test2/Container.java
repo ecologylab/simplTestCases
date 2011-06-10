@@ -39,7 +39,7 @@ public class Container extends ElementState
 		itemCollection2.add(new ItemTwo("three", 3));
 		itemCollection2.add(new ItemRandom("four", 4));
 		itemCollection2.add(new ItemRandom("five", 5));
-		itemCollection2.add(new ItemRandom("six", 6));
+		itemCollection2.add(new ItemRandom("six", 6)); 
 	}
 
 	public static void main(String args[]) throws SIMPLTranslationException
