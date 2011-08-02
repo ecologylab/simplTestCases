@@ -1,28 +1,23 @@
 package maps;
 
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.HashMap;
 
+import ecologylab.serialization.ElementState;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.ElementState.FORMAT;
 
 public class TestingMapsWithinMaps
 {
 	public static void main(String args[]) throws SIMPLTranslationException
 	{
 		TranslationS trans = createObject();
-		StringBuilder output = new StringBuilder();
-		
-		trans.serialize(output);
-
-		System.out.println(output);
-		
 		TranslationScope transScope = TranslationScope.get("testScope", TranslationS.class, ClassDes.class, FieldDes.class);
 	
-		TranslationS deserializedObject = (TranslationS) transScope.deserializeCharSequence(output.toString());
-		
-		System.out.println();
-		
-		deserializedObject.serialize(System.out);
+		testDeSerialization(trans, transScope, FORMAT.XML, false);
+		testDeSerialization(trans, transScope, FORMAT.JSON, false);
 	}
 	
 	public static TranslationS createObject()
@@ -46,5 +41,46 @@ public class TestingMapsWithinMaps
 		
 		
 		return trans;
+	}
+	
+	public static void testDeSerialization(ElementState test, TranslationScope translationScope,
+			FORMAT format, boolean setGraphSwitch) throws SIMPLTranslationException
+	{
+		System.out.println();
+		
+		if (setGraphSwitch)
+		{
+			TranslationScope.setGraphSwitch();
+		}
+
+		final StringBuilder output = new StringBuilder();
+		OutputStream outputStream = new OutputStream()
+		{
+			@Override
+			public void write(int b) throws IOException
+			{
+				output.append((char) b);
+			}
+		};
+
+		ElementState deserializedObject = null;
+
+		test.serialize(outputStream, format);
+
+		System.out.println("Initialized object serialized into " + format + " representation.");
+		System.out.println();
+		
+		System.out.println(output);
+		
+		System.out.println();
+
+		deserializedObject = translationScope.deserializeCharSequence(output, format);
+
+		System.out.println("Deserilized object serialized into " + format + "  representation");
+		System.out.println();
+		deserializedObject.serialize(System.out, format);
+
+		System.out.println();
+
 	}
 }

@@ -1,27 +1,32 @@
 package test2;
 
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 import ecologylab.serialization.ElementState;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.ElementState.FORMAT;
 
 public class Container extends ElementState
 {
 
+	
+	@simpl_nowrap
 	@simpl_scope("itemScope1")
 	@simpl_collection
 	ArrayList<ItemBase>	itemCollection1;
 
-	@simpl_scope("itemScope2")
-	@simpl_collection
+//	@simpl_scope("itemScope2")
+//	@simpl_collection
 	ArrayList<ItemBase>	itemCollection2;
 
 	public Container()
 	{
-		
+
 	}
-	
+
 	public void populateContainer()
 	{
 		itemCollection1 = new ArrayList<ItemBase>();
@@ -39,43 +44,66 @@ public class Container extends ElementState
 		itemCollection2.add(new ItemTwo("three", 3));
 		itemCollection2.add(new ItemRandom("four", 4));
 		itemCollection2.add(new ItemRandom("five", 5));
-		itemCollection2.add(new ItemRandom("six", 6)); 
+		itemCollection2.add(new ItemRandom("six", 6));
 	}
 
 	public static void main(String args[]) throws SIMPLTranslationException
 	{
-		
-		StringBuilder output = new StringBuilder();
+
 		Container c = new Container();
 		c.populateContainer();
-		
-		c.serialize(output);
-		
-		System.out.println(output);
 
 		TranslationScope itemTranslationScope = TranslationScope.get("itemScope1", ItemBase.class,
 				ItemOne.class, ItemTwo.class);
 
 		TranslationScope itemTranslationScope2 = TranslationScope.get("itemScope2", ItemBase.class,
 				ItemRandom.class, ItemTwo.class);
-		
+
 		TranslationScope containerTranslationScope = TranslationScope.get("containerScope",
 				Container.class, ItemBase.class, ItemOne.class, ItemTwo.class, ItemRandom.class);
-		
-		Container deserializedContainer = (Container) containerTranslationScope.deserializeCharSequence(output);
+
+		testDeSerialization(c, containerTranslationScope, FORMAT.JSON, false);
+
+	}
+
+	public static void testDeSerialization(ElementState test, TranslationScope translationScope,
+			FORMAT format, boolean setGraphSwitch) throws SIMPLTranslationException
+	{
+		System.out.println();
+
+		if (setGraphSwitch)
+		{
+			TranslationScope.setGraphSwitch();
+		}
+
+		final StringBuilder output = new StringBuilder();
+		OutputStream outputStream = new OutputStream()
+		{
+			@Override
+			public void write(int b) throws IOException
+			{
+				output.append((char) b);
+			}
+		};
+
+		ElementState deserializedObject = null;
+
+		test.serialize(outputStream, format);
+
+		System.out.println("Initialized object serialized into " + format + " representation.");
+		System.out.println();
+
+		System.out.println(output);
 
 		System.out.println();
+
+		deserializedObject = translationScope.deserializeCharSequence(output, format);
+
+		System.out.println("Deserilized object serialized into " + format + "  representation");
 		System.out.println();
-		
-		
-		deserializedContainer.serialize(System.out);
-		
-		deserializedContainer = (Container) containerTranslationScope.deserializeCharSequence(output);
+		deserializedObject.serialize(System.out, format);
 
 		System.out.println();
-		System.out.println();
-		
-		deserializedContainer.serialize(System.out);
-		
+
 	}
 }

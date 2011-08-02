@@ -9,6 +9,6 @@ public class ItemBase extends ElementState
 	
 	public ItemBase()
 	{
-		
+	
 	}
 }
