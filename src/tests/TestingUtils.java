@@ -1,21 +1,18 @@
 package tests;
 
+import java.io.IOException;
+
 import ecologylab.serialization.ClassDescriptor;
+import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.serializers.Format;
 
 public class TestingUtils
 {
-	public static void testSerailization(Object object, Format format)
+	public static void testSerailization(Object object, Format format) throws SIMPLTranslationException, IOException
 	{
-		try
-		{
-			ClassDescriptor.serialize(object, System.out, format);
-		}
-		catch (Exception ex)
-		{
-			System.out.println(ex.toString());
-		}
+
+		ClassDescriptor.serialize(object, System.out, format);
 
 		System.out.println();
 	}
