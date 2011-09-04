@@ -1,6 +1,7 @@
 package tests.circle;
 
 import tests.TestCase;
+import tests.TestingUtils;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_composite;
@@ -8,7 +9,7 @@ import ecologylab.serialization.annotations.simpl_hints;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.serializers.Format;
 
-public class Circle extends TestCase
+public class Circle implements TestCase
 {
 	@simpl_hints(Hint.XML_LEAF)
 	@simpl_scalar
@@ -38,8 +39,8 @@ public class Circle extends TestCase
 	{
 		Circle c = new Circle(3, 2, 1);
 
-		test(c, TranslationScope.get("circle", Circle.class, Point.class), Format.XML);
+		TestingUtils.test(c, TranslationScope.get("circle", Circle.class, Point.class), Format.XML);
 		
-		test(c, TranslationScope.get("circle", Circle.class, Point.class), Format.JSON);
+		TestingUtils.test(c, TranslationScope.get("circle", Circle.class, Point.class), Format.JSON);
 	}
 }

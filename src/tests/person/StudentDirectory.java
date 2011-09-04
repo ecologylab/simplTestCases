@@ -3,12 +3,13 @@ package tests.person;
 import java.util.ArrayList;
 
 import tests.TestCase;
+import tests.TestingUtils;
 
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.*;
 import ecologylab.serialization.serializers.Format;
 
-public class StudentDirectory extends TestCase
+public class StudentDirectory implements TestCase
 {
 	@simpl_collection("student")
 	private ArrayList<Student>	students	= new ArrayList<Student>();
@@ -43,11 +44,9 @@ public class StudentDirectory extends TestCase
 		StudentDirectory s = new StudentDirectory();
 		s.initializeDirectory();
 
-		test(s,
-				TranslationScope.get("studentDir", Person.class, Student.class, StudentDirectory.class),
-				Format.XML);
-		test(s,
-				TranslationScope.get("studentDir", Person.class, Student.class, StudentDirectory.class),
-				Format.JSON);
+		TestingUtils.test(s, TranslationScope.get("studentDir", Person.class, Student.class,
+				StudentDirectory.class), Format.XML);
+		TestingUtils.test(s, TranslationScope.get("studentDir", Person.class, Student.class,
+				StudentDirectory.class), Format.JSON);
 	}
 }

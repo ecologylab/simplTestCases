@@ -3,6 +3,7 @@ package tests.graph;
 import java.io.IOException;
 
 import tests.TestCase;
+import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_composite;
@@ -11,7 +12,7 @@ import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.serializers.Format;
 
 @simpl_inherit
-public class ClassA extends TestCase
+public class ClassA implements TestCase
 {
 	@simpl_scalar
 	private int			x;
@@ -89,7 +90,14 @@ public class ClassA extends TestCase
 		test.initializeInstance();
 		TranslationScope.setGraphSwitch();
 		
-		testSerailization(test, Format.XML);
-		testSerailization(test, Format.JSON);
+		TestingUtils.testSerailization(test, Format.XML);
+		TestingUtils.testSerailization(test, Format.JSON);
+	}
+
+	@Override
+	public void runTest()
+	{
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -3,6 +3,7 @@ package tests.circle;
 import java.util.ArrayList;
 
 import tests.TestCase;
+import tests.TestingUtils;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_collection;
@@ -10,7 +11,7 @@ import ecologylab.serialization.annotations.simpl_hints;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.serializers.Format;
 
-public class CollectionOfCircles extends TestCase
+public class CollectionOfCircles implements TestCase
 {
 	@simpl_collection("circles")
 	private ArrayList<Circle>	collectionOfCircles;
@@ -43,8 +44,8 @@ public class CollectionOfCircles extends TestCase
 		TranslationScope circleTranslationScope = TranslationScope.get("circleTScope",
 				CollectionOfCircles.class, Circle.class, Point.class);
 
-		test(coc, circleTranslationScope, Format.XML);
+		TestingUtils.test(coc, circleTranslationScope, Format.XML);
 
-		test(coc, circleTranslationScope, Format.JSON);
+		TestingUtils.test(coc, circleTranslationScope, Format.JSON);
 	}
 }

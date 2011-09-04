@@ -1,11 +1,12 @@
 package tests.circle;
 
 import tests.TestCase;
+import tests.TestingUtils;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.serializers.Format;
 
-public class Point extends TestCase
+public class Point implements TestCase
 {
 
 	@simpl_scalar
@@ -50,7 +51,7 @@ public class Point extends TestCase
 	{
 		Point p = new Point(1, 2);
 
-		test(p, TranslationScope.get("point", Point.class), Format.XML);
-		test(p, TranslationScope.get("point", Point.class), Format.JSON);
+		TestingUtils.test(p, TranslationScope.get("point", Point.class), Format.XML);
+		TestingUtils.test(p, TranslationScope.get("point", Point.class), Format.JSON);
 	}
 }

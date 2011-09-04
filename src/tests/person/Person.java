@@ -1,12 +1,13 @@
 package tests.person;
 
 import tests.TestCase;
+import tests.TestingUtils;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.serializers.Format;
 import ecologylab.serialization.types.element.Mappable;
 
-public class Person extends TestCase implements Mappable<String>
+public class Person implements TestCase, Mappable<String>
 {
 	@simpl_scalar
 	private String	name;
@@ -35,8 +36,8 @@ public class Person extends TestCase implements Mappable<String>
 	public void runTest()
 	{
 		Person p = new Person("nabeel");
-		test(p, TranslationScope.get("person", Person.class), Format.XML);
-		test(p, TranslationScope.get("person", Person.class), Format.JSON);
+		TestingUtils.test(p, TranslationScope.get("person", Person.class), Format.XML);
+		TestingUtils.test(p, TranslationScope.get("person", Person.class), Format.JSON);
 	}
 
 	@Override

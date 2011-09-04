@@ -18,7 +18,7 @@ public class RunTests
 		testCases.add(new Faculty());
 		testCases.add(new Student());
 		testCases.add(new StudentDirectory());
-		testCases.add(new PersonDirectory());
+//		testCases.add(new PersonDirectory());
 	}
 
 	public void runTestCases()
