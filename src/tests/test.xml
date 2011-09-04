@@ -1,0 +1,44 @@
+<collection_of_circles yo="1">
+	<circles>
+		<radius>1</radius>
+		<center x="2" y="3" />
+	</circles>
+	<circles>
+		<radius>1</radius>
+		<center x="2" y="4" />
+	</circles>
+	<circles>
+		<radius>1</radius>
+		<center x="2" y="5" />
+	</circles>
+	<circles>
+		<radius>1</radius>
+		<center x="2" y="6" />
+	</circles>
+	<circles>
+		<radius>1</radius>
+		<center x="2" y="7" />
+	</circles>
+</collection_of_circles>
+<collection_of_circles yo="1">
+	<circles>
+		<radius>1</radius>
+		<center x="2" y="3" />
+	</circles>
+	<circles>
+		<radius>1</radius>
+		<center x="2" y="4" />
+	</circles>
+	<circles>
+		<radius>1</radius>
+		<center x="2" y="5" />
+	</circles>
+	<circles>
+		<radius>1</radius>
+		<center x="2" y="6" />
+	</circles>
+	<circles>
+		<radius>1</radius>
+		<center x="2" y="7" />
+	</circles>
+</collection_of_circles>

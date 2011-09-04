@@ -6,7 +6,9 @@ import java.io.OutputStream;
 import ecologylab.serialization.ElementState;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
-import ecologylab.serialization.ElementState.FORMAT;
+import ecologylab.serialization.annotations.simpl_classes;
+import ecologylab.serialization.annotations.simpl_composite;
+import ecologylab.serialization.serializers.Format;
 
 public class Container extends ElementState
 {
@@ -28,7 +30,6 @@ public class Container extends ElementState
 	 */
 	public static void main(String[] args) throws SIMPLTranslationException
 	{
-		StringBuilder sb = new StringBuilder();	
 		Container c = new Container();
 		
 		//c.wc = new WCBase(224234);
@@ -39,11 +40,11 @@ public class Container extends ElementState
 		
 		
 		
-		testDeSerialization(c, containerTest, FORMAT.JSON, true);
+		testDeSerialization(c, containerTest, Format.XML, true);
 	}
 	
 	public static void testDeSerialization(ElementState test, TranslationScope translationScope,
-			FORMAT format, boolean setGraphSwitch) throws SIMPLTranslationException
+			Format format, boolean setGraphSwitch) throws SIMPLTranslationException
 	{
 		System.out.println();
 		
@@ -73,7 +74,7 @@ public class Container extends ElementState
 		
 		System.out.println();
 
-		deserializedObject = translationScope.deserializeCharSequence(output, format);
+		deserializedObject = (ElementState) translationScope.deserializeCharSequence(output, format);
 
 		System.out.println("Deserilized object serialized into " + format + "  representation");
 		System.out.println();

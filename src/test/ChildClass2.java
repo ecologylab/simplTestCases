@@ -1,6 +1,8 @@
 package test;
 
-import ecologylab.serialization.Hint;
+import ecologylab.serialization.annotations.Hint;
+import ecologylab.serialization.annotations.simpl_hints;
+import ecologylab.serialization.annotations.simpl_scalar;
 
 public class ChildClass2 extends BaseClass
 {

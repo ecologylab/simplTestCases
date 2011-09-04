@@ -1,8 +1,9 @@
 package test2;
 
-import ecologylab.serialization.ElementState.xml_tag;
+import ecologylab.serialization.annotations.simpl_scalar;
+import ecologylab.serialization.annotations.simpl_tag;
 
-@xml_tag("item_one")
+@simpl_tag("item_one")
 public class ItemRandom extends ItemBase
 {
 	@simpl_scalar

@@ -3,6 +3,9 @@ package maps;
 import java.util.HashMap;
 
 import ecologylab.serialization.ElementState;
+import ecologylab.serialization.annotations.simpl_map;
+import ecologylab.serialization.annotations.simpl_nowrap;
+import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.types.element.Mappable;
 
 public class ClassDes extends ElementState implements Mappable<String>

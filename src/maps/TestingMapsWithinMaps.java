@@ -2,12 +2,11 @@ package maps;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.HashMap;
 
 import ecologylab.serialization.ElementState;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
-import ecologylab.serialization.ElementState.FORMAT;
+import ecologylab.serialization.serializers.Format;
 
 public class TestingMapsWithinMaps
 {
@@ -16,8 +15,8 @@ public class TestingMapsWithinMaps
 		TranslationS trans = createObject();
 		TranslationScope transScope = TranslationScope.get("testScope", TranslationS.class, ClassDes.class, FieldDes.class);
 	
-		testDeSerialization(trans, transScope, FORMAT.XML, false);
-		testDeSerialization(trans, transScope, FORMAT.JSON, false);
+		testDeSerialization(trans, transScope, Format.XML, false);
+		testDeSerialization(trans, transScope, Format.JSON, false);
 	}
 	
 	public static TranslationS createObject()
@@ -44,7 +43,7 @@ public class TestingMapsWithinMaps
 	}
 	
 	public static void testDeSerialization(ElementState test, TranslationScope translationScope,
-			FORMAT format, boolean setGraphSwitch) throws SIMPLTranslationException
+			Format format, boolean setGraphSwitch) throws SIMPLTranslationException
 	{
 		System.out.println();
 		
@@ -74,7 +73,7 @@ public class TestingMapsWithinMaps
 		
 		System.out.println();
 
-		deserializedObject = translationScope.deserializeCharSequence(output, format);
+		deserializedObject = (ElementState) translationScope.deserializeCharSequence(output, format);
 
 		System.out.println("Deserilized object serialized into " + format + "  representation");
 		System.out.println();

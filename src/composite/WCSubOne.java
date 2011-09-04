@@ -1,5 +1,7 @@
 package composite;
 
+import ecologylab.serialization.annotations.simpl_scalar;
+
 
 public class WCSubOne extends WCBase
 {
