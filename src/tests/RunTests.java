@@ -11,13 +11,13 @@ public class RunTests
 
 	public RunTests()
 	{
-		testCases.add(new Point());
-		testCases.add(new Circle());
-		testCases.add(new CollectionOfCircles());
-		testCases.add(new Person());
-		testCases.add(new Faculty());
-		testCases.add(new Student());
-		testCases.add(new StudentDirectory());
+//		testCases.add(new Point());
+//		testCases.add(new Circle());
+//		testCases.add(new CollectionOfCircles());
+//		testCases.add(new Person());
+//		testCases.add(new Faculty());
+//		testCases.add(new Student());
+//		testCases.add(new StudentDirectory());
 		testCases.add(new PersonDirectory());
 	}
 
