@@ -2,6 +2,7 @@ package tests.circle;
 
 import tests.TestCase;
 import tests.TestingUtils;
+import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_composite;
@@ -35,7 +36,7 @@ public class Circle implements TestCase
 	}
 	
 	@Override
-	public void runTest()
+	public void runTest() throws SIMPLTranslationException
 	{
 		Circle c = new Circle(3, 2, 1);
 

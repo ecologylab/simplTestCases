@@ -2,6 +2,7 @@ package tests.person;
 
 import tests.TestCase;
 import tests.TestingUtils;
+import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.*;
 import ecologylab.serialization.serializers.Format;
@@ -36,7 +37,7 @@ class Faculty extends Person implements TestCase
 	}
 	
 	@Override
-	public void runTest()
+	public void runTest() throws SIMPLTranslationException
 	{
 		Faculty f = new Faculty("andruid", "professor");
 		TestingUtils.test(f, TranslationScope.get("faculty", Person.class, Faculty.class), Format.XML);

@@ -1,40 +1,29 @@
-package tests.graph;
+package tests.graph.diamond;
 
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_composite;
-import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.serializers.Format;
 
-public class ClassB implements TestCase
+public class ClassD implements TestCase
 {
-	@simpl_scalar
-	private int			a;
-
-	@simpl_scalar
-	private int			b;
-
 	@simpl_composite
 	private ClassA	classA;
 
-	public ClassB()
+	@simpl_composite
+	private ClassB	classB;
+
+	public ClassD()
 	{
 
 	}
-	
-	public ClassB(int a, int b)
-	{
-		this.a = a;
-		this.b = b;		
-	}
 
-	public ClassB(int a, int b, ClassA classA)
+	public ClassD(ClassA classA, ClassB classB)
 	{
-		this.a = a;
-		this.b = b;
-		this.classA = classA;
+		this.setClassA(classA);
+		this.setClassB(classB);
 	}
 
 	public void setClassA(ClassA classA)
@@ -47,37 +36,26 @@ public class ClassB implements TestCase
 		return classA;
 	}
 
-	public void setB(int b)
+	public void setClassB(ClassB classB)
 	{
-		this.b = b;
+		this.classB = classB;
 	}
 
-	public int getB()
+	public ClassB getClassB()
 	{
-		return b;
+		return classB;
 	}
 
-	public void setA(int a)
-	{
-		this.a = a;
-	}
-
-	public int getA()
-	{
-		return a;
-	}
-	
 	@Override
 	public void runTest() throws SIMPLTranslationException
 	{
 		TranslationScope.enableGraphSerialization();
 
-		ClassB test = new ClassB(1, 2);
-		ClassA classA = new ClassA(3, 4, test);
-		
-		test.setClassA(classA);
-		
-		TranslationScope tScope = TranslationScope.get("classB", ClassA.class, ClassB.class);
+		ClassC classC = new ClassC();
+		ClassD test = new ClassD(new ClassA(classC), new ClassB(classC));
+
+		TranslationScope tScope = TranslationScope.get("classD", ClassA.class, ClassB.class,
+				ClassC.class, ClassD.class, ClassX.class);
 
 		TestingUtils.test(test, tScope, Format.XML);
 		TestingUtils.test(test, tScope, Format.JSON);

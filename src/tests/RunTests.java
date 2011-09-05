@@ -3,6 +3,9 @@ package tests;
 import java.util.ArrayList;
 
 import tests.circle.*;
+import tests.graph.ClassA;
+import tests.graph.ClassB;
+import tests.graph.diamond.ClassD;
 import tests.person.*;
 
 public class RunTests
@@ -11,14 +14,28 @@ public class RunTests
 
 	public RunTests()
 	{
+		//composite
 		testCases.add(new Point());
 		testCases.add(new Circle());
+		
+		//collection of composite
 		testCases.add(new CollectionOfCircles());
+		
+		//composite inheritence
 		testCases.add(new Person());
 		testCases.add(new Faculty());
 		testCases.add(new Student());
+		
+		//mono-morphic collection
 		testCases.add(new StudentDirectory());
+		
+		//polymorphic collection
 		testCases.add(new PersonDirectory());
+		
+		//graph
+		testCases.add(new ClassA());
+		testCases.add(new ClassB());
+		testCases.add(new ClassD());
 	}
 
 	public void runTestCases()
@@ -26,7 +43,7 @@ public class RunTests
 		System.out.println("*****Executing " + testCases.size() + " Test Cases******** ");
 		System.out.println();
 
-		int i = 1;
+		int i = 0;
 		int fail = 0;
 
 		for (TestCase testCase : testCases)
@@ -35,16 +52,22 @@ public class RunTests
 			{
 				System.out
 						.println("--------------------------------------------------------------------------------------------------------------------------------------------------");
-				System.out.println("Test Case " + i++ + " : " + testCase.getClass().getCanonicalName());
+				System.out.println("Test Case " + ++i + " : " + testCase.getClass().getCanonicalName());
 				System.out
 						.println("--------------------------------------------------------------------------------------------------------------------------------------------------");
 				testCase.runTest();
 			}
 			catch (Exception ex)
 			{
+				System.out.println();
+				System.out.println(); 
+				ex.printStackTrace();
+				System.out.println(); 
 				fail++;
 			}
 		}
+		
+		System.out.println();
 		System.out.println("*****End: " + fail + " of " +i+ " tests failed ********");
 	}
 

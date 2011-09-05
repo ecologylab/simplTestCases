@@ -49,7 +49,7 @@ public class TestingMapsWithinMaps
 		
 		if (setGraphSwitch)
 		{
-			TranslationScope.setGraphSwitch();
+			TranslationScope.enableGraphSerialization();
 		}
 
 		final StringBuilder output = new StringBuilder();

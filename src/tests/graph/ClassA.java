@@ -4,9 +4,12 @@ import java.io.IOException;
 
 import tests.TestCase;
 import tests.TestingUtils;
+import tests.circle.Point;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_composite;
+import ecologylab.serialization.annotations.simpl_hints;
 import ecologylab.serialization.annotations.simpl_inherit;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.serializers.Format;
@@ -31,10 +34,17 @@ public class ClassA implements TestCase
 
 	}
 
-	public ClassA(ClassB classB)
+	public ClassA(int x, int y)
 	{
-		setX(1);
-		setY(2);
+		setX(x);
+		setY(y);
+		setClassA(this);
+	}
+
+	public ClassA(int x, int y, ClassB classB)
+	{
+		setX(x);
+		setY(y);
 		setClassB(classB);
 		setClassA(this);
 	}
@@ -79,25 +89,21 @@ public class ClassA implements TestCase
 		return classA;
 	}
 
-	/**
-	 * @param args
-	 * @throws SIMPLTranslationException
-	 * @throws IOException
-	 */
-	public static void main(String[] args) throws SIMPLTranslationException, IOException
-	{
-		ClassB test = new ClassB();
-		test.initializeInstance();
-		TranslationScope.setGraphSwitch();
-		
-		TestingUtils.testSerailization(test, Format.XML);
-		TestingUtils.testSerailization(test, Format.JSON);
-	}
-
 	@Override
-	public void runTest()
+	public void runTest() throws SIMPLTranslationException
 	{
-		// TODO Auto-generated method stub
-		
+		TranslationScope.enableGraphSerialization();
+
+		ClassA test = new ClassA(1, 2);
+		ClassB classB = new ClassB(3, 4, test);
+
+		test.setClassB(classB);
+
+		TranslationScope tScope = TranslationScope.get("classA", ClassA.class, ClassB.class);
+
+		TestingUtils.test(test, tScope, Format.XML);
+		TestingUtils.test(test, tScope, Format.JSON);
+
+		TranslationScope.disableGraphSerialization();
 	}
 }

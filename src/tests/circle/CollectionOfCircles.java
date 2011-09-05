@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import tests.TestCase;
 import tests.TestingUtils;
+import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_collection;
@@ -31,7 +32,7 @@ public class CollectionOfCircles implements TestCase
 	}
 
 	@Override
-	public void runTest()
+	public void runTest() throws SIMPLTranslationException
 	{
 		CollectionOfCircles coc = new CollectionOfCircles();
 

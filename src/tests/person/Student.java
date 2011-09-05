@@ -1,6 +1,7 @@
 package tests.person;
 
 import tests.TestingUtils;
+import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.*;
 import ecologylab.serialization.serializers.Format;
@@ -34,7 +35,7 @@ public class Student extends Person
 	}
 
 	@Override
-	public void runTest()
+	public void runTest() throws SIMPLTranslationException
 	{
 		Student s = new Student("nabeel", "12343434");
 		TestingUtils.test(s, TranslationScope.get("student", Person.class, Student.class), Format.XML);

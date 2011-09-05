@@ -9,42 +9,26 @@ import ecologylab.serialization.serializers.Format;
 
 public class TestingUtils
 {
-	public static void testSerailization(Object object, Format format) throws SIMPLTranslationException, IOException
+	public static void testSerailization(Object object, Format format) throws SIMPLTranslationException
 	{
-
 		ClassDescriptor.serialize(object, System.out, format);
-
 		System.out.println();
 	}
 
-	public static void testSerailization(Object object, StringBuilder sb, Format format)
-	{
-		try
-		{
+	public static void testSerailization(Object object, StringBuilder sb, Format format) throws SIMPLTranslationException
+	{		
 			ClassDescriptor.serialize(object, sb, format);
-			System.out.println(sb);
-		}
-		catch (Exception ex)
-		{
-			System.out.println(ex.toString());
-		}
+			System.out.println(sb);	
 	}
 
 	public static void testDeserailization(StringBuilder sb, TranslationScope translationScope,
-			Format format)
-	{
-		try
-		{
+			Format format) throws SIMPLTranslationException
+	{		
 			Object object = translationScope.deserializeCharSequence(sb, format);
-			testSerailization(object, format);
-		}
-		catch (Exception ex)
-		{
-			System.out.println(ex.toString());
-		}
+			testSerailization(object, format);		
 	}
 
-	public static void test(Object object, TranslationScope translationScope, Format format)
+	public static void test(Object object, TranslationScope translationScope, Format format) throws SIMPLTranslationException
 	{
 		StringBuilder sb = new StringBuilder();
 		testSerailization(object, sb, format);

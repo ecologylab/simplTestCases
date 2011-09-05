@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import tests.TestCase;
 import tests.TestingUtils;
 
+import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.*;
 import ecologylab.serialization.serializers.Format;
@@ -33,7 +34,7 @@ public class PersonDirectory implements TestCase
 	}
 
 	@Override
-	public void runTest()
+	public void runTest() throws SIMPLTranslationException
 	{
 		PersonDirectory p = new PersonDirectory();
 		p.initializeDirectory();

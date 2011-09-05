@@ -50,7 +50,7 @@ public class Container extends ElementState
 		
 		if (setGraphSwitch)
 		{
-			TranslationScope.setGraphSwitch();
+			TranslationScope.enableGraphSerialization();
 		}
 
 		final StringBuilder output = new StringBuilder();

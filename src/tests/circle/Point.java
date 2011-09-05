@@ -2,6 +2,7 @@ package tests.circle;
 
 import tests.TestCase;
 import tests.TestingUtils;
+import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.serializers.Format;
@@ -47,7 +48,7 @@ public class Point implements TestCase
 	}
 
 	@Override
-	public void runTest()
+	public void runTest() throws SIMPLTranslationException
 	{
 		Point p = new Point(1, 2);
 

@@ -5,12 +5,13 @@ import java.util.ArrayList;
 import tests.TestCase;
 import tests.TestingUtils;
 
+import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.*;
 import ecologylab.serialization.serializers.Format;
 
 public class StudentDirectory implements TestCase
-{
+{	
 	@simpl_collection("student")
 	private ArrayList<Student>	students	= new ArrayList<Student>();
 
@@ -39,7 +40,7 @@ public class StudentDirectory implements TestCase
 	}
 
 	@Override
-	public void runTest()
+	public void runTest() throws SIMPLTranslationException
 	{
 		StudentDirectory s = new StudentDirectory();
 		s.initializeDirectory();

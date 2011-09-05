@@ -2,6 +2,7 @@ package tests.person;
 
 import tests.TestCase;
 import tests.TestingUtils;
+import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.serializers.Format;
@@ -33,7 +34,7 @@ public class Person implements TestCase, Mappable<String>
 	}
 
 	@Override
-	public void runTest()
+	public void runTest() throws SIMPLTranslationException
 	{
 		Person p = new Person("nabeel");
 		TestingUtils.test(p, TranslationScope.get("person", Person.class), Format.XML);
