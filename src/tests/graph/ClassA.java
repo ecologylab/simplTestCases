@@ -12,7 +12,7 @@ import ecologylab.serialization.annotations.simpl_composite;
 import ecologylab.serialization.annotations.simpl_hints;
 import ecologylab.serialization.annotations.simpl_inherit;
 import ecologylab.serialization.annotations.simpl_scalar;
-import ecologylab.serialization.serializers.Format;
+import ecologylab.serialization.serializers.enums.Format;
 
 @simpl_inherit
 public class ClassA implements TestCase

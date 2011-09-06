@@ -1,11 +1,9 @@
 package tests;
 
-import java.io.IOException;
-
 import ecologylab.serialization.ClassDescriptor;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
-import ecologylab.serialization.serializers.Format;
+import ecologylab.serialization.serializers.enums.Format;
 
 public class TestingUtils
 {

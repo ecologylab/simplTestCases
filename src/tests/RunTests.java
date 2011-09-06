@@ -3,10 +3,13 @@ package tests;
 import java.util.ArrayList;
 
 import tests.circle.*;
+import tests.configuration.Configuration;
 import tests.graph.ClassA;
 import tests.graph.ClassB;
+import tests.graph.collections.Container;
 import tests.graph.diamond.ClassD;
 import tests.person.*;
+import tests.rss.Rss;
 
 public class RunTests
 {
@@ -25,22 +28,25 @@ public class RunTests
 		testCases.add(new Person());
 		testCases.add(new Faculty());
 		testCases.add(new Student());
+		testCases.add(new Rss());
 		
 		//mono-morphic collection
 		testCases.add(new StudentDirectory());
 		
 		//polymorphic collection
 		testCases.add(new PersonDirectory());
+		testCases.add(new Configuration());
 		
 		//graph
 		testCases.add(new ClassA());
 		testCases.add(new ClassB());
 		testCases.add(new ClassD());
+		testCases.add(new Container());
 	}
 
 	public void runTestCases()
 	{
-		System.out.println("*****Executing " + testCases.size() + " Test Cases******** ");
+		System.out.println("***** Executing " + testCases.size() + " Test Cases ******** ");
 		System.out.println();
 
 		int i = 0;
@@ -68,7 +74,7 @@ public class RunTests
 		}
 		
 		System.out.println();
-		System.out.println("*****End: " + fail + " of " +i+ " tests failed ********");
+		System.out.println("***** End: " + fail + " of " +i+ " tests failed ********");
 	}
 
 	public static void main(String[] args)

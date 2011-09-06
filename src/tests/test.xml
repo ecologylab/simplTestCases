@@ -1,20 +1,36 @@
-<class_d
+<container
 	xmlns:simpl="http://ecologylab.net/research/simplGuide/serialization/index.html">
-	<class_a x="1" y="2">
-		<class_c u="55" w="54" simpl:id="931322429" />
-	</class_a>
-	<class_b x="1" y="2">
-		<class_c simpl:ref="931322429" />
-		<class_x u="44" w="33" />
-	</class_b>
-</class_d>
-<class_d
+	<objectsA u="55" w="54" simpl:id="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA simpl:ref="11985823" />
+	<objectsA u="55" w="54" />
+	<objectsA u="55" w="54" />
+</container>
+<container
 	xmlns:simpl="http://ecologylab.net/research/simplGuide/serialization/index.html">
-	<class_a x="1" y="2">
-		<class_c u="55" w="54" simpl:id="1370784151" />
-	</class_a>
-	<class_b x="1" y="2">
-		<class_c simpl:ref="1370784151" />
-		<class_x u="44" w="33" />
-	</class_b>
-</class_d>
+	<objectsA u="55" w="54" simpl:id="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA simpl:ref="644591081" />
+	<objectsA u="55" w="54" />
+	<objectsA u="55" w="54" />
+</container>

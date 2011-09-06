@@ -8,7 +8,7 @@ import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_composite;
 import ecologylab.serialization.annotations.simpl_hints;
 import ecologylab.serialization.annotations.simpl_scalar;
-import ecologylab.serialization.serializers.Format;
+import ecologylab.serialization.serializers.enums.Format;
 
 public class Circle implements TestCase
 {

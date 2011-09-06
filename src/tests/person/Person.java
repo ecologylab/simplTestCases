@@ -5,10 +5,10 @@ import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_scalar;
-import ecologylab.serialization.serializers.Format;
-import ecologylab.serialization.types.element.Mappable;
+import ecologylab.serialization.serializers.enums.Format;
+import ecologylab.serialization.types.element.IMappable;
 
-public class Person implements TestCase, Mappable<String>
+public class Person implements TestCase, IMappable<String>
 {
 	@simpl_scalar
 	private String	name;

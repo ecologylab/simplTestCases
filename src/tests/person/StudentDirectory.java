@@ -8,7 +8,7 @@ import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.*;
-import ecologylab.serialization.serializers.Format;
+import ecologylab.serialization.serializers.enums.Format;
 
 public class StudentDirectory implements TestCase
 {	
