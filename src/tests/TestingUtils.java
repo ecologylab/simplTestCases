@@ -1,9 +1,9 @@
 package tests;
 
 import ecologylab.serialization.ClassDescriptor;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
-import ecologylab.serialization.serializers.enums.Format;
 
 public class TestingUtils
 {

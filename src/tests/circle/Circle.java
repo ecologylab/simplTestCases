@@ -2,13 +2,13 @@ package tests.circle;
 
 import tests.TestCase;
 import tests.TestingUtils;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_composite;
 import ecologylab.serialization.annotations.simpl_hints;
 import ecologylab.serialization.annotations.simpl_scalar;
-import ecologylab.serialization.serializers.enums.Format;
 
 public class Circle implements TestCase
 {

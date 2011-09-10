@@ -2,10 +2,10 @@ package tests.person;
 
 import tests.TestCase;
 import tests.TestingUtils;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_scalar;
-import ecologylab.serialization.serializers.enums.Format;
 import ecologylab.serialization.types.element.IMappable;
 
 public class Person implements TestCase, IMappable<String>

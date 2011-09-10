@@ -2,10 +2,10 @@ package tests.graph.diamond;
 
 import tests.TestCase;
 import tests.TestingUtils;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_composite;
-import ecologylab.serialization.serializers.enums.Format;
 
 public class ClassD implements TestCase
 {

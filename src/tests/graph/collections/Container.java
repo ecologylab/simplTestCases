@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 import tests.TestCase;
 import tests.TestingUtils;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_collection;
 import ecologylab.serialization.annotations.simpl_nowrap;
-import ecologylab.serialization.serializers.enums.Format;
 
 public class Container implements TestCase
 {

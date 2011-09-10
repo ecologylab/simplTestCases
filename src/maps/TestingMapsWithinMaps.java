@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 import ecologylab.serialization.ElementState;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
-import ecologylab.serialization.serializers.enums.Format;
 
 public class TestingMapsWithinMaps
 {
