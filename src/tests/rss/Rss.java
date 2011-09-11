@@ -2,18 +2,13 @@
 
 package tests.rss;
 
-import java.io.IOException;
-import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
 import tests.TestCase;
 import tests.TestingUtils;
-
 import ecologylab.net.ParsedURL;
-import ecologylab.serialization.ElementState;
-import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;

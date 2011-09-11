@@ -1,11 +1,11 @@
 package tests.person;
 
 import tests.TestingUtils;
-import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
-import ecologylab.serialization.annotations.*;
+import ecologylab.serialization.annotations.simpl_inherit;
+import ecologylab.serialization.annotations.simpl_scalar;
 
 @simpl_inherit
 public class Student extends Person

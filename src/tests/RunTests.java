@@ -2,13 +2,19 @@ package tests;
 
 import java.util.ArrayList;
 
-import tests.circle.*;
+import tests.circle.Circle;
+import tests.circle.CollectionOfCircles;
+import tests.circle.Point;
 import tests.configuration.Configuration;
 import tests.graph.ClassA;
 import tests.graph.ClassB;
 import tests.graph.collections.Container;
 import tests.graph.diamond.ClassD;
-import tests.person.*;
+import tests.person.Faculty;
+import tests.person.Person;
+import tests.person.PersonDirectory;
+import tests.person.Student;
+import tests.person.StudentDirectory;
 import tests.rss.Rss;
 
 public class RunTests

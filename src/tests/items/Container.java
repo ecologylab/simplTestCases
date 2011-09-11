@@ -55,11 +55,11 @@ public class Container implements TestCase
 		Container c = new Container();
 		c.populateContainer();
 
-		TranslationScope itemTranslationScope = TranslationScope.get("itemScope1", ItemBase.class,
-				ItemOne.class, ItemTwo.class);
-
-		TranslationScope itemTranslationScope2 = TranslationScope.get("itemScope2", ItemBase.class,
-				ItemRandom.class, ItemTwo.class);
+//		TranslationScope itemTranslationScope = TranslationScope.get("itemScope1", ItemBase.class,
+//				ItemOne.class, ItemTwo.class);
+//
+//		TranslationScope itemTranslationScope2 = TranslationScope.get("itemScope2", ItemBase.class,
+//				ItemRandom.class, ItemTwo.class);
 
 		TranslationScope containerTranslationScope = TranslationScope.get("containerScope",
 				Container.class, ItemBase.class, ItemOne.class, ItemTwo.class, ItemRandom.class);
