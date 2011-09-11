@@ -3,6 +3,7 @@ package tests.person;
 import tests.TestingUtils;
 import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
+import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.*;
 
@@ -38,7 +39,7 @@ public class Student extends Person
 	public void runTest() throws SIMPLTranslationException
 	{
 		Student s = new Student("nabeel", "12343434");
-		TestingUtils.test(s, TranslationScope.get("student", Person.class, Student.class), Format.XML);
-		TestingUtils.test(s, TranslationScope.get("student", Person.class, Student.class), Format.JSON);
+		TestingUtils.test(s, TranslationScope.get("student", Person.class, Student.class), StringFormat.XML);
+		TestingUtils.test(s, TranslationScope.get("student", Person.class, Student.class), StringFormat.JSON);
 	}
 }

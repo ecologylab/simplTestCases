@@ -1,4 +1,4 @@
-package test2;
+package tests.items;
 
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.annotations.simpl_tag;

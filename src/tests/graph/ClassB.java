@@ -4,6 +4,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
+import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_composite;
 import ecologylab.serialization.annotations.simpl_scalar;
@@ -23,11 +24,11 @@ public class ClassB implements TestCase
 	{
 
 	}
-	
+
 	public ClassB(int a, int b)
 	{
 		this.a = a;
-		this.b = b;		
+		this.b = b;
 	}
 
 	public ClassB(int a, int b, ClassA classA)
@@ -66,7 +67,7 @@ public class ClassB implements TestCase
 	{
 		return a;
 	}
-	
+
 	@Override
 	public void runTest() throws SIMPLTranslationException
 	{
@@ -74,13 +75,13 @@ public class ClassB implements TestCase
 
 		ClassB test = new ClassB(1, 2);
 		ClassA classA = new ClassA(3, 4, test);
-		
+
 		test.setClassA(classA);
-		
+
 		TranslationScope tScope = TranslationScope.get("classB", ClassA.class, ClassB.class);
 
-		TestingUtils.test(test, tScope, Format.XML);
-		TestingUtils.test(test, tScope, Format.JSON);
+		TestingUtils.test(test, tScope, StringFormat.XML);
+		TestingUtils.test(test, tScope, StringFormat.JSON);
 
 		TranslationScope.disableGraphSerialization();
 	}

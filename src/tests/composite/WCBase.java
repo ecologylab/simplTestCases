@@ -1,4 +1,4 @@
-package composite;
+package tests.composite;
 
 import ecologylab.serialization.ElementState;
 import ecologylab.serialization.annotations.simpl_scalar;

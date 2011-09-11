@@ -1,12 +1,11 @@
-package maps;
+package tests.maps;
 
 import java.util.HashMap;
 
-import ecologylab.serialization.ElementState;
 import ecologylab.serialization.annotations.simpl_map;
 import ecologylab.serialization.annotations.simpl_nowrap;
 
-public class TranslationS extends ElementState
+public class TranslationS 
 {
 	@simpl_nowrap
 	@simpl_map("class_descriptor")

@@ -7,6 +7,7 @@ import tests.TestingUtils;
 
 import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
+import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.*;
 
@@ -42,7 +43,7 @@ public class PersonDirectory implements TestCase
 		TranslationScope translationScope = TranslationScope.get("personDir", Person.class,
 				Faculty.class, Student.class, PersonDirectory.class);
 
-		TestingUtils.test(p, translationScope, Format.XML);
-		TestingUtils.test(p, translationScope, Format.JSON);
+		TestingUtils.test(p, translationScope, StringFormat.XML);
+		TestingUtils.test(p, translationScope, StringFormat.JSON);
 	}
 }

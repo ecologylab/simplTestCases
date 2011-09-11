@@ -1,4 +1,4 @@
-package test;
+package tests.inheritance;
 
 import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_hints;

@@ -1,28 +1,26 @@
-package test2;
+package tests.items;
 
-import java.io.IOException;
-import java.io.OutputStream;
 import java.util.ArrayList;
 
-import ecologylab.serialization.ElementState;
-import ecologylab.serialization.Format;
+import tests.TestCase;
+import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
+import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_collection;
 import ecologylab.serialization.annotations.simpl_nowrap;
 import ecologylab.serialization.annotations.simpl_scope;
 
-public class Container extends ElementState
+public class Container implements TestCase
 {
 
-	
 	@simpl_nowrap
 	@simpl_scope("itemScope1")
 	@simpl_collection
 	ArrayList<ItemBase>	itemCollection1;
 
-//	@simpl_scope("itemScope2")
-//	@simpl_collection
+	// @simpl_scope("itemScope2")
+	// @simpl_collection
 	ArrayList<ItemBase>	itemCollection2;
 
 	public Container()
@@ -50,7 +48,8 @@ public class Container extends ElementState
 		itemCollection2.add(new ItemRandom("six", 6));
 	}
 
-	public static void main(String args[]) throws SIMPLTranslationException
+	@Override
+	public void runTest() throws SIMPLTranslationException
 	{
 
 		Container c = new Container();
@@ -65,48 +64,8 @@ public class Container extends ElementState
 		TranslationScope containerTranslationScope = TranslationScope.get("containerScope",
 				Container.class, ItemBase.class, ItemOne.class, ItemTwo.class, ItemRandom.class);
 
-		testDeSerialization(c, containerTranslationScope, Format.JSON, false);
-
-	}
-
-	public static void testDeSerialization(ElementState test, TranslationScope translationScope,
-			Format format, boolean setGraphSwitch) throws SIMPLTranslationException
-	{
-		System.out.println();
-
-		if (setGraphSwitch)
-		{
-			TranslationScope.enableGraphSerialization();
-		}
-
-		final StringBuilder output = new StringBuilder();
-		OutputStream outputStream = new OutputStream()
-		{
-			@Override
-			public void write(int b) throws IOException
-			{
-				output.append((char) b);
-			}
-		};
-
-		ElementState deserializedObject = null;
-
-		test.serialize(outputStream, format);
-
-		System.out.println("Initialized object serialized into " + format + " representation.");
-		System.out.println();
-
-		System.out.println(output);
-
-		System.out.println();
-
-		deserializedObject = (ElementState) translationScope.deserializeCharSequence(output, format);
-
-		System.out.println("Deserilized object serialized into " + format + "  representation");
-		System.out.println();
-		deserializedObject.serialize(System.out, format);
-
-		System.out.println();
+		TestingUtils.test(c, containerTranslationScope, StringFormat.XML);
+		TestingUtils.test(c, containerTranslationScope, StringFormat.JSON);
 
 	}
 }

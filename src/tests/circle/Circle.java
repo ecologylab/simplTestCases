@@ -4,6 +4,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
+import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_composite;
@@ -40,8 +41,8 @@ public class Circle implements TestCase
 	{
 		Circle c = new Circle(3, 2, 1);
 
-		TestingUtils.test(c, TranslationScope.get("circle", Circle.class, Point.class), Format.XML);
+		TestingUtils.test(c, TranslationScope.get("circle", Circle.class, Point.class), StringFormat.XML);
 		
-		TestingUtils.test(c, TranslationScope.get("circle", Circle.class, Point.class), Format.JSON);
+		TestingUtils.test(c, TranslationScope.get("circle", Circle.class, Point.class), StringFormat.JSON);
 	}
 }

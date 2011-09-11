@@ -1,14 +1,13 @@
-package maps;
+package tests.maps;
 
 import java.util.HashMap;
 
-import ecologylab.serialization.ElementState;
 import ecologylab.serialization.annotations.simpl_map;
 import ecologylab.serialization.annotations.simpl_nowrap;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.types.element.IMappable;
 
-public class ClassDes extends ElementState implements IMappable<String>
+public class ClassDes implements IMappable<String>
 {
 	@simpl_scalar
 	public String														tagName;

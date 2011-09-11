@@ -1,22 +1,23 @@
-package test2;
+package tests.items;
 
 import ecologylab.serialization.annotations.simpl_inherit;
 import ecologylab.serialization.annotations.simpl_scalar;
 
 @simpl_inherit
-public class ItemTwo extends ItemBase
+public class ItemOne extends ItemBase
 {
 	@simpl_scalar
-	String testString;
+	int testing;
 	
-	public ItemTwo()
+	
+	public ItemOne()
 	{
 		
 	}
 	
-	public ItemTwo(String testString, int var)
+	public ItemOne(int testing, int var)
 	{
-		this.testString = testString;
+		this.testing = testing;
 		this.var = var;
 	}
 }

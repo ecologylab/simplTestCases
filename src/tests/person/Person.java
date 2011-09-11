@@ -4,6 +4,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
+import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.types.element.IMappable;
@@ -37,8 +38,8 @@ public class Person implements TestCase, IMappable<String>
 	public void runTest() throws SIMPLTranslationException
 	{
 		Person p = new Person("nabeel");
-		TestingUtils.test(p, TranslationScope.get("person", Person.class), Format.XML);
-		TestingUtils.test(p, TranslationScope.get("person", Person.class), Format.JSON);
+		TestingUtils.test(p, TranslationScope.get("person", Person.class), StringFormat.XML);
+		TestingUtils.test(p, TranslationScope.get("person", Person.class), StringFormat.JSON);
 	}
 
 	@Override

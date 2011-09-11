@@ -1,4 +1,4 @@
-package test;
+package tests.inheritance;
 
 import ecologylab.serialization.ElementState;
 import ecologylab.serialization.annotations.simpl_other_tags;
@@ -7,7 +7,7 @@ import ecologylab.serialization.annotations.simpl_tag;
 
 @simpl_other_tags({"the_field"})
 @simpl_tag("fred")
-public class BaseClass extends ElementState
+public class BaseClass
 {
 	@simpl_tag("new_tag_var")
 	@simpl_other_tags("other_tag_var")

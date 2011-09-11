@@ -1,10 +1,9 @@
-package maps;
+package tests.maps;
 
-import ecologylab.serialization.ElementState;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.types.element.IMappable;
 
-public class FieldDes extends ElementState implements IMappable<String>
+public class FieldDes implements IMappable<String>
 {
 	@simpl_scalar
 	public String	fieldName;
