@@ -1,36 +1,15 @@
-<container
-	xmlns:simpl="http://ecologylab.net/research/simplGuide/serialization/index.html">
-	<objectsA u="55" w="54" simpl:id="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA simpl:ref="11985823" />
-	<objectsA u="55" w="54" />
-	<objectsA u="55" w="54" />
-</container>
-<container
-	xmlns:simpl="http://ecologylab.net/research/simplGuide/serialization/index.html">
-	<objectsA u="55" w="54" simpl:id="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA simpl:ref="644591081" />
-	<objectsA u="55" w="54" />
-	<objectsA u="55" w="54" />
-</container>
+<rss version="1.0">
+	<channel>
+		<item>
+			<title>testItem1</title>
+			<description>testItem1Description</description>
+		</item>
+		<item>
+			<title>testItem2</title>
+			<description>testItem2Description</description>
+		</item>
+		<title>testTitle</title>
+		<description>testDescription</description>
+		<link>http://www.google.com</link>
+	</channel>
+</rss>

@@ -20,8 +20,8 @@ public class Item extends ElementState
    @simpl_scalar @simpl_hints(Hint.XML_LEAF) ParsedURL		guid;
    @simpl_scalar @simpl_hints(Hint.XML_LEAF) String			author;
    
-   @simpl_nowrap
-   @simpl_collection("category") 
+//   @simpl_nowrap
+//   @simpl_collection("category") 
    ArrayList<String>		categorySet;
    
    public Item() {}
