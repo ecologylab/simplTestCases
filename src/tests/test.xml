@@ -1,15 +1,25 @@
-<rss version="1.0">
-	<channel>
-		<item>
-			<title>testItem1</title>
-			<description>testItem1Description</description>
-		</item>
-		<item>
-			<title>testItem2</title>
-			<description>testItem2Description</description>
-		</item>
-		<title>testTitle</title>
-		<description>testDescription</description>
-		<link>http://www.google.com</link>
-	</channel>
-</rss>
+<collection_of_circles>
+	<collection_of_circles>
+		<circles>
+			<radius>1</radius>
+			<center x="2" y="3" />
+		</circles>
+		<circles>
+			<radius>1</radius>
+			<center x="2" y="4" />
+		</circles>
+		<circles>
+			<radius>1</radius>
+			<center x="2" y="5" />
+		</circles>
+		<circles>
+			<radius>1</radius>
+			<center x="2" y="6" />
+		</circles>
+		<circles>
+			<radius>1</radius>
+			<center x="2" y="7" />
+		</circles>
+	</collection_of_circles>
+	<yo>1</yo>
+</collection_of_circles>

@@ -76,7 +76,7 @@ public class Rss implements TestCase
 		channel.items = items;
 		rssState.channel = channel;
 
-		//TestingUtils.test(rssState, translationScope, StringFormat.XML);
+		TestingUtils.test(rssState, translationScope, StringFormat.XML);
 		TestingUtils.test(rssState, translationScope, StringFormat.JSON);
 
 	}
