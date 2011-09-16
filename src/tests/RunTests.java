@@ -10,6 +10,7 @@ import tests.graph.ClassA;
 import tests.graph.ClassB;
 import tests.graph.collections.Container;
 import tests.graph.diamond.ClassD;
+import tests.maps.TestingMapsWithinMaps;
 import tests.person.Faculty;
 import tests.person.Person;
 import tests.person.PersonDirectory;
@@ -52,6 +53,8 @@ public class RunTests
 
 		// scalar collection
 		testCases.add(new ScalarCollection());
+		
+		testCases.add(new TestingMapsWithinMaps());
 	}
 
 	public void runTestCases()
