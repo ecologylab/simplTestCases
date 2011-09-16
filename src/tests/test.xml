@@ -1,0 +1,564 @@
+<information_composition version="5.0"
+	metadata_version="2.686" window_size="NEAR_FULL" width="1600" height="1128"
+	xmlns:simpl="http://ecologylab.net/research/simplGuide/serialization/index.html">
+	<clippings>
+		<text_clipping
+			text=" Semantic web researchers tend to assume that XML Schema and OWL-S are the correct means for representing the types, structure, and semantics of XML data used for documents and interchange between programs and services. These technologies separate information representati&#10;"
+			simpl:id="1485443964">
+			<source_doc>
+				<scholarly_article mm_name="acm_portal"
+					location="http://dl.acm.org/ft_gateway.cfm?id=1410152&amp;preflayout=flat&amp;type=pdf"
+					title="A concise XML binding framework facilitates practical object-oriented document engineering"
+					metadata_page="http://dl.acm.org/ft_gateway.cfm?id=1410152&amp;type=pdf&amp;CFID=40689376&amp;CFTOKEN=33082420"
+					pages="62-65">
+					<additional_locations>
+						<location></location>
+						<location></location>
+						<location></location>
+						<location></location>
+					</additional_locations>
+					<clippings>
+						<text_clipping
+							context="A concise XML binding framework facilitates practical object-oriented document engineering"
+							text="concise XML binding framework"></text_clipping>
+						<text_clipping simpl:ref="1485443964" />
+					</clippings>
+					<abstract>Semantic web researchers tend to assume that XML Schema
+						and OWL-S are the correct means for representing the types,
+						structure, and semantics of XML data used for documents and
+						interchange between programs and services. These technologies
+						separate information representation from implementation. The
+						separation may seem like a benefit, because it is
+						platform-agnostic. The problem is that the separation interferes
+						with writing correct programs for practical document engineering,
+						because it violates a primary principle of object-oriented
+						programming: integration of data structures and algorithms. We
+						develop an XML binding framework that connects Java object
+						declarations with serialized XML representation. A basis of the
+						framework is a metalanguage, embedded in Java object and field
+						declarations, designed to be particularly concise, to facilitate
+						the authoring and maintenance of programs that generate and
+						manipulate XML documents. The framework serves as the foundation
+						for a layered software architecture that includes meta-metadata
+						descriptions for multimedia information extraction, modeling, and
+						visualization; Lightweight Semantic Distributed Computing
+						Services; interaction logging services; and a user studies
+						framework.</abstract>
+					<authors>
+						<author
+							location="http://dl.acm.org/author_page.cfm?id=81100203284&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=40689376&amp;cftoken=33082420"
+							title="Andruid Kerne"></author>
+						<author
+							location="http://dl.acm.org/author_page.cfm?id=81309499161&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=40689376&amp;cftoken=33082420"
+							title="Zachary O. Toups"></author>
+						<author
+							location="http://dl.acm.org/author_page.cfm?id=81372592305&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=40689376&amp;cftoken=33082420"
+							title="Blake Dworaczyk"></author>
+						<author
+							location="http://dl.acm.org/author_page.cfm?id=81100056278&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=40689376&amp;cftoken=33082420"
+							title="Madhur Khandelwal"></author>
+					</authors>
+					<source mm_name="source" location="http://dl.acm.org/DocEng &#39;08"
+						title="DocEng &#39;08 Proceeding of the eighth ACM symposium on Document engineering           &#10;		           table&#160;of&#160;contents"
+						year="2008" isbn="978-1-60558-081-4">
+						<authors>
+							<author
+								location="http://dl.acm.org/author_page.cfm?id=81372593396&amp;CFID=40689376&amp;CFTOKEN=33082420"
+								title="Maria de Gra&#231;a Pimentel"></author>
+							<author
+								location="http://dl.acm.org/author_page.cfm?id=81372593141&amp;CFID=40689376&amp;CFTOKEN=33082420"
+								title="Dick C.A. Bulterman"></author>
+						</authors>
+					</source>
+					<references>
+						<reference
+							title="Ars Technica. http://feeds.arstechnica.com/arstechnica/BAaf."
+							description="Ars Technica. http://feeds.arstechnica.com/arstechnica/BAaf."></reference>
+						<reference
+							title=", Meta-Metadata: A Layer for Multimedia Metadata Definition, Extraction, and Representation, submitted to SAMT 2008"
+							description="Damaraju, S., Bandaru, B.K., Kerne, A., Meta-Metadata: A Layer for Multimedia Metadata Definition, Extraction, and Representation, submitted to SAMT 2008.">
+							<authors>
+								<author title="Damaraju, S."></author>
+								<author title="Bandaru, B."></author>
+								<author title="Kerne, A."></author>
+							</authors>
+							<source mm_name="source"></source>
+						</reference>
+						<reference
+							location="http://dl.acm.org/citation.cfm?id=1036643&amp;CFID=40689376&amp;CFTOKEN=33082420"
+							title="Java(TM) Language Specification"
+							description="James Gosling , Bill Joy , Guy Steele , Gilad Bracha, Java(TM) Language Specification, The (3rd Edition) (Java (Addison-Wesley)), Addison-Wesley Professional, 2005">
+							<authors>
+								<author title="James Gosling"></author>
+								<author title="Bill Joy"></author>
+								<author title="Guy Steele"></author>
+								<author title="Gilad Bracha"></author>
+							</authors>
+							<source mm_name="source"
+								title="The (3rd Edition) (Java (Addison-Wesley))" year="2005"></source>
+						</reference>
+						<reference
+							title="Interface Ecology Lab, ecologylab.xml. http://ecologylab.net/xml."
+							description="Interface Ecology Lab, ecologylab.xml. http://ecologylab.net/xml."></reference>
+						<reference
+							title="jaxb: JAXB Reference Implementation. http://jaxb.dev.java.net."
+							description="jaxb: JAXB Reference Implementation. http://jaxb.dev.java.net."></reference>
+						<reference
+							location="http://dl.acm.org/citation.cfm?id=958221&amp;CFID=40689376&amp;CFTOKEN=33082420"
+							title="XML five years on: a review of the achievements so far and the challenges ahead"
+							description="Michael H. Kay, XML five years on: a review of the achievements so far and the challenges ahead, Proceedings of the 2003 ACM symposium on Document engineering, p.29-31, November 20-22, 2003, Grenoble, France  &#160;[doi&gt;10.1145/958220.958221]">
+							<authors>
+								<author title="Michael H. Kay"></author>
+							</authors>
+							<source mm_name="source"
+								title="Proceedings of the 2003 ACM symposium on Document engineering"
+								year="2003"></source>
+						</reference>
+						<reference
+							title="RSS Advisory Board. RSS 2.0 Specification (version 2.0.9). http://www.rssboard.org/rss-specification. 2007."
+							description="RSS Advisory Board. RSS 2.0 Specification (version 2.0.9). http://www.rssboard.org/rss-specification. 2007."></reference>
+						<reference
+							title="Sun. Annotations. http://java.sun.com/j2se/1.5.0/docs/guide/language/annotations.html, 2004."
+							description="Sun. Annotations. http://java.sun.com/j2se/1.5.0/docs/guide/language/annotations.html, 2004."></reference>
+						<reference
+							title="Sun. Collections Framework. http://java.sun.com/j2se/1.5.0/docs/guide/collections/overview.html, 2004."
+							description="Sun. Collections Framework. http://java.sun.com/j2se/1.5.0/docs/guide/collections/overview.html, 2004."></reference>
+						<reference
+							title="A Framework for Rapid Development of Composable Little Semantic Web Services"
+							description="Toups, Z.O., Kerne, A. A Framework for Rapid Development of Composable Little Semantic Web Services. sent to ISWC 2008.">
+							<authors>
+								<author title="Toups, Z."></author>
+								<author title="Kerne, A."></author>
+							</authors>
+							<source mm_name="source" title=". sent to ISWC" year="2008"></source>
+						</reference>
+						<reference
+							title="W3C. Extensible Markup Language (XML) 1.0 (Fourth Edition). http://www.w3.org/TR/REC-xml, 2006."
+							description="W3C. Extensible Markup Language (XML) 1.0 (Fourth Edition). http://www.w3.org/TR/REC-xml, 2006."></reference>
+						<reference
+							title="W3C. XML Schema Part 1: Structures, http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/structures.html, 2004"
+							description="W3C. XML Schema Part 1: Structures, http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/structures.html, 2004"></reference>
+					</references>
+					<classifications>
+						<tag tag_name="Software"
+							link="http://dl.acm.org/results.cfm?query=PrimaryCCS%3AD&amp;querydisp=PrimaryCCS%3AD&amp;termshow=matchboolean&amp;CFID=40689376&amp;CFTOKEN=33082420"></tag>
+						<tag tag_name="PROGRAMMING LANGUAGES"
+							link="http://dl.acm.org/results.cfm?query=PrimaryCCS%3AD3&amp;querydisp=PrimaryCCS%3AD3&amp;termshow=matchboolean&amp;CFID=40689376&amp;CFTOKEN=33082420"></tag>
+						<tag tag_name="Language Constructs and Features"
+							link="http://dl.acm.org/results.cfm?query=PrimaryCCS%3AD33&amp;querydisp=PrimaryCCS%3AD33&amp;termshow=matchboolean&amp;CFID=40689376&amp;CFTOKEN=33082420"></tag>
+						<tag tag_name="Data types and structures"
+							link="http://dl.acm.org/results.cfm?query=PrimarySubject%3A%22Data%20types%20and%20structures%22&amp;querydisp=PrimarySubject%3A%22Data%20types%20and%20structures%22&amp;termshow=matchboolean&amp;CFID=40689376&amp;CFTOKEN=33082420"></tag>
+						<tag tag_name="Software"
+							link="http://dl.acm.org/results.cfm?query=CCS%3AD&amp;querydisp=CCS%3AD&amp;termshow=matchboolean&amp;CFID=40689376&amp;CFTOKEN=33082420"></tag>
+						<tag tag_name="PROGRAMMING LANGUAGES"
+							link="http://dl.acm.org/results.cfm?query=CCS%3AD3&amp;querydisp=CCS%3AD3&amp;termshow=matchboolean&amp;CFID=40689376&amp;CFTOKEN=33082420"></tag>
+						<tag tag_name="Language Constructs and Features"
+							link="http://dl.acm.org/results.cfm?query=CCS%3AD33&amp;querydisp=CCS%3AD33&amp;termshow=matchboolean&amp;CFID=40689376&amp;CFTOKEN=33082420"></tag>
+						<tag tag_name="Frameworks"
+							link="http://dl.acm.org/results.cfm?query=Subject%3A%22Frameworks%22&amp;querydisp=Subject%3A%22Frameworks%22&amp;termshow=matchboolean&amp;CFID=40689376&amp;CFTOKEN=33082420"></tag>
+					</classifications>
+					<keywords>
+						<tag tag_name="binding framework"
+							link="http://dl.acm.org/results.cfm?query=%22binding%20framework%22&amp;querydisp=%22binding%20framework%22&amp;termshow=matchall&amp;cfid=40689376&amp;cftoken=33082420"></tag>
+						<tag tag_name="data types and structures"
+							link="http://dl.acm.org/results.cfm?query=%22data%20types%20and%20structures%22&amp;querydisp=%22data%20types%20and%20structures%22&amp;termshow=matchall&amp;cfid=40689376&amp;cftoken=33082420"></tag>
+						<tag tag_name="design"
+							link="http://dl.acm.org/results.cfm?query=%22design%22&amp;querydisp=%22design%22&amp;termshow=matchall&amp;cfid=40689376&amp;cftoken=33082420"></tag>
+						<tag tag_name="frameworks"
+							link="http://dl.acm.org/results.cfm?query=%22frameworks%22&amp;querydisp=%22frameworks%22&amp;termshow=matchall&amp;cfid=40689376&amp;cftoken=33082420"></tag>
+						<tag tag_name="human factors"
+							link="http://dl.acm.org/results.cfm?query=%22human%20factors%22&amp;querydisp=%22human%20factors%22&amp;termshow=matchall&amp;cfid=40689376&amp;cftoken=33082420"></tag>
+						<tag tag_name="java"
+							link="http://dl.acm.org/results.cfm?query=%22java%22&amp;querydisp=%22java%22&amp;termshow=matchall&amp;cfid=40689376&amp;cftoken=33082420"></tag>
+						<tag tag_name="languages"
+							link="http://dl.acm.org/results.cfm?query=%22languages%22&amp;querydisp=%22languages%22&amp;termshow=matchall&amp;cfid=40689376&amp;cftoken=33082420"></tag>
+						<tag tag_name="metalanguage"
+							link="http://dl.acm.org/results.cfm?query=%22metalanguage%22&amp;querydisp=%22metalanguage%22&amp;termshow=matchall&amp;cfid=40689376&amp;cftoken=33082420"></tag>
+						<tag tag_name="object-oriented programming"
+							link="http://dl.acm.org/results.cfm?query=%22object%2Doriented%20programming%22&amp;querydisp=%22object%2Doriented%20programming%22&amp;termshow=matchall&amp;cfid=40689376&amp;cftoken=33082420"></tag>
+						<tag tag_name="translation"
+							link="http://dl.acm.org/results.cfm?query=%22translation%22&amp;querydisp=%22translation%22&amp;termshow=matchall&amp;cfid=40689376&amp;cftoken=33082420"></tag>
+						<tag tag_name="xml"
+							link="http://dl.acm.org/results.cfm?query=%22xml%22&amp;querydisp=%22xml%22&amp;termshow=matchall&amp;cfid=40689376&amp;cftoken=33082420"></tag>
+					</keywords>
+				</scholarly_article>
+			</source_doc>
+		</text_clipping>
+	</clippings>
+	<composition_space extent="0 0 1600 1128" is_active="true"
+		is_interactive="true" z_index="-1">
+		<kids>
+			<composition_element extent="473 463 273 136"
+				id="No Source  Semantic web researchers tend to assume that XML Schema and OWL-S are the correct means for representing the types, structure, and semantics of XML data used for documents and interchange between programs and services. These technologies separate information representati&#10;"
+				is_active="true" is_interactive="true" z_index="-1">
+				<kids>
+					<text_chunk_visual extent="473 463 273 136"
+						bgcolor="#fb9e9e" is_active="true" is_interactive="true" z_index="-1"
+						color="#a7000000" text_color="#0" link_color="#a7000000"
+						orig_link_color="#0" orig_color="#0" orig_bg_color="#fb9e9e"
+						alpha_magnitude_cache="1.0">
+						<kids>
+							<text_token_visual extent="473 463 62 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string="Semantic">
+								<named_style font_size="13" />
+								<token delims_before="" simpl:id="95806480">
+									<string>Semantic</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="535 463 32 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" web">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="405384798">
+									<string>web</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="567 463 84 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" researchers">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1945101484">
+									<string>researchers</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="651 463 34 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" tend">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1116384981">
+									<string>tend</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="685 463 18 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" to">
+								<named_style font_size="13" />
+								<token delims_before=" " end_of_line="1" simpl:id="563072462">
+									<string>to</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="473 480 51 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string="assume">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="147447523">
+									<string>assume</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="524 480 31 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" that">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="264730128">
+									<string>that</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="555 480 32 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" XML">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1422004373">
+									<string>XML</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="587 480 58 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" Schema">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="909268645">
+									<string>Schema</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="645 480 29 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" and">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1003017216">
+									<string>and</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="674 480 50 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" OWL-S">
+								<named_style font_size="13" />
+								<token delims_before=" " end_of_line="1" simpl:id="1423449306">
+									<string>OWL-S</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="473 497 22 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string="are">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1048887801">
+									<string>are</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="495 497 26 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" the">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1763180485">
+									<string>the</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="521 497 52 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" correct">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="980154379">
+									<string>correct</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="573 497 49 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" means">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="741242012">
+									<string>means</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="622 497 24 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" for">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="648013253">
+									<string>for</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="646 497 89 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" representing">
+								<named_style font_size="13" />
+								<token delims_before=" " end_of_line="1" simpl:id="1760327955">
+									<string>representing</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="473 514 21 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string="the">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1302876078">
+									<string>the</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="494 514 46 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" types,">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1497636288">
+									<string>types,</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="540 514 70 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" structure,">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1986881021">
+									<string>structure,</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="610 514 29 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" and">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="77098055">
+									<string>and</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="639 514 72 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" semantics">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1479370115">
+									<string>semantics</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="711 514 18 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" of">
+								<named_style font_size="13" />
+								<token delims_before=" " end_of_line="1" simpl:id="838116391">
+									<string>of</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="473 531 27 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string="XML">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1414103908">
+									<string>XML</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="500 531 34 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" data">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="46376251">
+									<string>data</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="534 531 36 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" used">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="169764449">
+									<string>used</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="570 531 24 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" for">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="394937890">
+									<string>for</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="594 531 77 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" documents">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1332463333">
+									<string>documents</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="671 531 29 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" and">
+								<named_style font_size="13" />
+								<token delims_before=" " end_of_line="1" simpl:id="95633567">
+									<string>and</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="473 548 78 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string="interchange">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="441727287">
+									<string>interchange</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="551 548 61 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" between">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="34301568">
+									<string>between</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="612 548 69 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" programs">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="731078255">
+									<string>programs</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="681 548 29 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" and">
+								<named_style font_size="13" />
+								<token delims_before=" " end_of_line="1" simpl:id="899919475">
+									<string>and</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="473 565 60 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string="services.">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1840307907">
+									<string>services.</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="533 565 44 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" These">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="14607708">
+									<string>These</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="577 565 88 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" technologies">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1953933017">
+									<string>technologies</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="665 565 63 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" separate">
+								<named_style font_size="13" />
+								<token delims_before=" " end_of_line="1" simpl:id="1842107899">
+									<string>separate</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="473 582 77 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string="information">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1163744423">
+									<string>information</string>
+								</token>
+							</text_token_visual>
+							<text_token_visual extent="550 582 86 17"
+								is_active="true" is_interactive="true" z_index="-1" color="#a7000000"
+								string=" representati">
+								<named_style font_size="13" />
+								<token delims_before=" " simpl:id="1489468966">
+									<string>representati</string>
+								</token>
+							</text_token_visual>
+						</kids>
+						<named_style font_size="13" simpl:id="288038483" />
+						<semantic_text_chunk>
+							<semantic_text_token simpl:ref="95806480" />
+							<semantic_text_token simpl:ref="405384798" />
+							<semantic_text_token simpl:ref="1945101484" />
+							<semantic_text_token simpl:ref="1116384981" />
+							<semantic_text_token simpl:ref="563072462" />
+							<semantic_text_token simpl:ref="147447523" />
+							<semantic_text_token simpl:ref="264730128" />
+							<semantic_text_token simpl:ref="1422004373" />
+							<semantic_text_token simpl:ref="909268645" />
+							<semantic_text_token simpl:ref="1003017216" />
+							<semantic_text_token simpl:ref="1423449306" />
+							<semantic_text_token simpl:ref="1048887801" />
+							<semantic_text_token simpl:ref="1763180485" />
+							<semantic_text_token simpl:ref="980154379" />
+							<semantic_text_token simpl:ref="741242012" />
+							<semantic_text_token simpl:ref="648013253" />
+							<semantic_text_token simpl:ref="1760327955" />
+							<semantic_text_token simpl:ref="1302876078" />
+							<semantic_text_token simpl:ref="1497636288" />
+							<semantic_text_token simpl:ref="1986881021" />
+							<semantic_text_token simpl:ref="77098055" />
+							<semantic_text_token simpl:ref="1479370115" />
+							<semantic_text_token simpl:ref="838116391" />
+							<semantic_text_token simpl:ref="1414103908" />
+							<semantic_text_token simpl:ref="46376251" />
+							<semantic_text_token simpl:ref="169764449" />
+							<semantic_text_token simpl:ref="394937890" />
+							<semantic_text_token simpl:ref="1332463333" />
+							<semantic_text_token simpl:ref="95633567" />
+							<semantic_text_token simpl:ref="441727287" />
+							<semantic_text_token simpl:ref="34301568" />
+							<semantic_text_token simpl:ref="731078255" />
+							<semantic_text_token simpl:ref="899919475" />
+							<semantic_text_token simpl:ref="1840307907" />
+							<semantic_text_token simpl:ref="14607708" />
+							<semantic_text_token simpl:ref="1953933017" />
+							<semantic_text_token simpl:ref="1842107899" />
+							<semantic_text_token simpl:ref="1163744423" />
+							<semantic_text_token simpl:ref="1489468966" />
+							<named_style simpl:ref="288038483" />
+						</semantic_text_chunk>
+						<text_clipping simpl:ref="1485443964" />
+					</text_chunk_visual>
+				</kids>
+				<text_clipping simpl:ref="1485443964" />
+			</composition_element>
+		</kids>
+	</composition_space>
+</information_composition>
