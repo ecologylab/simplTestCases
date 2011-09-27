@@ -53,7 +53,7 @@ public class RunTests
 
 		// scalar collection
 		testCases.add(new ScalarCollection());
-		
+
 		testCases.add(new TestingMapsWithinMaps());
 	}
 
