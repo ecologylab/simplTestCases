@@ -23,8 +23,9 @@
 	<project reference="0.9.3,https://svn.ecologylab.net/ecologylabSemanticsCyberneko/trunk,ecologylabSemanticsCyberneko" />	
 	<project reference="0.9.3,https://svn.ecologylab.net/cyberneko/trunk,cyberneko" />
 	<project reference="0.9.3,https://svn.ecologylab.net/ecologylabSemantics/trunk,ecologylabSemantics" />
+	<project reference="0.9.3,https://svn.ecologylab.net/ecologylabSemanticsExample/trunk,ecologylabSemanticsExample" />
 	<project reference="0.9.3,https://svn.ecologylab.net/ecologylabSemanticsLocationAware/trunk,ecologylabSemanticsLocationAware" />
-	<project reference="0.9.3,https://svn.ecologylab.net/ecologylabSemanticsApp/trunk,ecologylabSemanticsApp" />
+	<project reference="0.9.3,https://svn.ecologylab.net/ecologylabInteractiveSemanticsApps/trunk,ecologylabInteractiveSemanticsApps" />
 	<project reference="0.9.3,https://svn.ecologylab.net/geoTools/trunk,GeoTools" />								
 </provider>
 </psf>
