@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.StringFormat;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_collection;
 
@@ -38,8 +38,8 @@ public class ScalarCollection implements TestCase
 		TranslationScope scalarCollectionTranslationScope = TranslationScope.get(
 				"scalarCollectionTScope", ScalarCollection.class);
 
-		TestingUtils.test(sc, scalarCollectionTranslationScope, StringFormat.XML);
+		TestingUtils.test(sc, scalarCollectionTranslationScope, Format.XML);
 
-		TestingUtils.test(sc, scalarCollectionTranslationScope, StringFormat.JSON);
+		TestingUtils.test(sc, scalarCollectionTranslationScope, Format.JSON);
 	}
 }

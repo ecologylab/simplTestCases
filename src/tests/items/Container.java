@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.StringFormat;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_collection;
 import ecologylab.serialization.annotations.simpl_nowrap;
@@ -64,8 +64,8 @@ public class Container implements TestCase
 		TranslationScope containerTranslationScope = TranslationScope.get("containerScope",
 				Container.class, ItemBase.class, ItemOne.class, ItemTwo.class, ItemRandom.class);
 
-		TestingUtils.test(c, containerTranslationScope, StringFormat.XML);
-		TestingUtils.test(c, containerTranslationScope, StringFormat.JSON);
+		TestingUtils.test(c, containerTranslationScope, Format.XML);
+		TestingUtils.test(c, containerTranslationScope, Format.JSON);
 
 	}
 }

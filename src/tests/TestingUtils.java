@@ -1,37 +1,67 @@
 package tests;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 import ecologylab.serialization.ClassDescriptor;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.deserializers.parsers.tlv.Utils;
 
 public class TestingUtils
 {
-	public static void testSerailization(Object object, StringFormat format) throws SIMPLTranslationException
+
+	public static void testSerailization(Object object, OutputStream outStream, Format format)
+			throws SIMPLTranslationException
 	{
-		ClassDescriptor.serialize(object, System.out, format);
+		ClassDescriptor.serialize(object, outStream, format);
+	}
+
+	public static void testDeserailization(InputStream inputStream,
+			TranslationScope translationScope, Format format) throws SIMPLTranslationException
+	{
+		Object object = translationScope.deserialize(inputStream, format);
+		testSerailization(object, System.out, format);
+	}
+
+	public static void test(Object object, TranslationScope translationScope, Format format)
+			throws SIMPLTranslationException
+	{
+		OutputStream output = new OutputStream()
+		{
+			StringBuilder	string	= new StringBuilder();
+
+			@Override
+			public void write(int b) throws IOException
+			{
+				this.string.append((char) b);
+			}
+			
+			public String toString()
+			{
+				return this.string.toString();
+			}
+		};
+		
+		testSerailization(object, output, format);		
+		printString(output.toString(), format);
+//		testDeserailization(new ByteArrayInputStream(output.toString().getBytes()), translationScope,
+//				format);
+
 		System.out.println();
 	}
-
-	public static void testSerailization(Object object, StringBuilder sb, StringFormat format) throws SIMPLTranslationException
-	{		
-			ClassDescriptor.serialize(object, sb, format);
-			System.out.println(sb);	
-	}
-
-	public static void testDeserailization(StringBuilder sb, TranslationScope translationScope,
-			StringFormat format) throws SIMPLTranslationException
-	{		
-			Object object = translationScope.deserialize(sb, format);
-			testSerailization(object, format);		
-	}
-
-	public static void test(Object object, TranslationScope translationScope, StringFormat format) throws SIMPLTranslationException
+	
+	public static void printString(String string, Format format)
 	{
-		StringBuilder sb = new StringBuilder();
-		testSerailization(object, sb, format);
-		testDeserailization(sb, translationScope, format);
-
-		System.out.println();
+		if(format == Format.TLV)
+		{
+			Utils.writeHex(System.out, string.getBytes());			
+		}
+		else
+		{
+			System.out.println(string);
+		}
 	}
 }

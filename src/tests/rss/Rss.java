@@ -10,7 +10,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.net.ParsedURL;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.StringFormat;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_composite;
 import ecologylab.serialization.annotations.simpl_scalar;
@@ -76,8 +76,8 @@ public class Rss implements TestCase
 		channel.items = items;
 		rssState.channel = channel;
 
-		TestingUtils.test(rssState, translationScope, StringFormat.XML);
-		TestingUtils.test(rssState, translationScope, StringFormat.JSON);
+		TestingUtils.test(rssState, translationScope, Format.XML);
+		TestingUtils.test(rssState, translationScope, Format.JSON);
 
 	}
 }

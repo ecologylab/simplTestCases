@@ -3,7 +3,7 @@ package tests.maps;
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.StringFormat;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.TranslationScope;
 
 public class TestingMapsWithinMaps implements TestCase
@@ -38,8 +38,8 @@ public class TestingMapsWithinMaps implements TestCase
 		TranslationScope tScope = TranslationScope.get("testScope", TranslationS.class, ClassDes.class,
 				FieldDes.class);
 
-		TestingUtils.test(test, tScope, StringFormat.XML);
-		TestingUtils.test(test, tScope, StringFormat.JSON);
+		TestingUtils.test(test, tScope, Format.XML);
+		TestingUtils.test(test, tScope, Format.JSON);
 
 		TranslationScope.disableGraphSerialization();
 

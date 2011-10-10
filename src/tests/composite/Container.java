@@ -3,7 +3,7 @@ package tests.composite;
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.StringFormat;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_classes;
 import ecologylab.serialization.annotations.simpl_composite;
@@ -32,8 +32,8 @@ public class Container implements TestCase
 		TranslationScope containerTest = TranslationScope.get("containerTranslationscope",
 				Container.class, WCBase.class, WCSubOne.class, WCSubTwo.class);
 
-		TestingUtils.test(c, containerTest, StringFormat.XML);
-		TestingUtils.test(c, containerTest, StringFormat.JSON);
+		TestingUtils.test(c, containerTest, Format.XML);
+		TestingUtils.test(c, containerTest, Format.JSON);
 
 	}
 }

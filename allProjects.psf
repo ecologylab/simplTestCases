@@ -26,6 +26,9 @@
 	<project reference="0.9.3,https://svn.ecologylab.net/ecologylabSemanticsExample/trunk,ecologylabSemanticsExample" />
 	<project reference="0.9.3,https://svn.ecologylab.net/ecologylabSemanticsLocationAware/trunk,ecologylabSemanticsLocationAware" />
 	<project reference="0.9.3,https://svn.ecologylab.net/ecologylabInteractiveSemanticsApps/trunk,ecologylabInteractiveSemanticsApps" />
-	<project reference="0.9.3,https://svn.ecologylab.net/geoTools/trunk,GeoTools" />								
+	<project reference="0.9.3,https://svn.ecologylab.net/geoTools/trunk,GeoTools" />
+	<project reference="0.9.3,https://svn.ecologylab.net/ecologylabStudies/trunk,ecologylabStudies" />														
+	<project reference="0.9.3,https://svn.ecologylab.net/TTeCStudies/trunk,TeCStudies" />
+	<project reference="0.9.3,https://svn.ecologylab.net/photoNav/trunk,photoNav" />
 </provider>
 </psf>

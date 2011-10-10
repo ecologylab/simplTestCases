@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import tests.TestCase;
 import tests.TestingUtils;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_collection;
@@ -45,8 +45,8 @@ public class CollectionOfCircles implements TestCase
 		TranslationScope circleTranslationScope = TranslationScope.get("circleTScope",
 				CollectionOfCircles.class, Circle.class, Point.class);
 
-		TestingUtils.test(coc, circleTranslationScope, StringFormat.XML);
+		TestingUtils.test(coc, circleTranslationScope, Format.XML);
 
-		TestingUtils.test(coc, circleTranslationScope, StringFormat.JSON);
+		TestingUtils.test(coc, circleTranslationScope, Format.JSON);
 	}
 }

@@ -3,7 +3,7 @@ package tests.graph.diamond;
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.StringFormat;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_composite;
 
@@ -57,8 +57,8 @@ public class ClassD implements TestCase
 		TranslationScope tScope = TranslationScope.get("classD", ClassA.class, ClassB.class,
 				ClassC.class, ClassD.class, ClassX.class);
 
-		TestingUtils.test(test, tScope, StringFormat.XML);
-		TestingUtils.test(test, tScope, StringFormat.JSON);
+		TestingUtils.test(test, tScope, Format.XML);
+		TestingUtils.test(test, tScope, Format.JSON);
 
 		TranslationScope.disableGraphSerialization();
 	}
