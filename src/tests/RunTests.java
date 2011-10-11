@@ -27,34 +27,34 @@ public class RunTests
 	{
 		// composite
 		testCases.add(new Point());
-//		testCases.add(new Circle());
+		testCases.add(new Circle());
 //
 //		// collection of composite
-//		testCases.add(new CollectionOfCircles());
-//
-//		// composite inheritence
-//		testCases.add(new Person());
-//		testCases.add(new Faculty());
-//		testCases.add(new Student());
-//		testCases.add(new Rss());
-//
-//		// mono-morphic collection
-//		testCases.add(new StudentDirectory());
-//
-//		// polymorphic collection
-//		testCases.add(new PersonDirectory());
-//		testCases.add(new Configuration());
-//
-//		// graph
-//		testCases.add(new ClassA());
-//		testCases.add(new ClassB());
-//		testCases.add(new ClassD());
-//		testCases.add(new Container());
-//
-//		// scalar collection
-//		testCases.add(new ScalarCollection());
-//
-//		testCases.add(new TestingMapsWithinMaps());
+		testCases.add(new CollectionOfCircles());
+
+		// composite inheritence
+		testCases.add(new Person());
+		testCases.add(new Faculty());
+		testCases.add(new Student());
+		testCases.add(new Rss());
+
+		// mono-morphic collection
+		testCases.add(new StudentDirectory());
+
+		// polymorphic collection
+		testCases.add(new PersonDirectory());
+		testCases.add(new Configuration());
+
+		// graph
+		testCases.add(new ClassA());
+		testCases.add(new ClassB());
+		testCases.add(new ClassD());
+		testCases.add(new Container());
+
+		// scalar collection
+		testCases.add(new ScalarCollection());
+
+		testCases.add(new TestingMapsWithinMaps());
 	}
 
 	public void runTestCases()

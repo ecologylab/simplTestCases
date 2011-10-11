@@ -32,7 +32,7 @@ public class TestingMapsWithinMaps implements TestCase
 	@Override
 	public void runTest() throws SIMPLTranslationException
 	{
-		TranslationScope.enableGraphSerialization();
+//		TranslationScope.enableGraphSerialization();
 
 		TranslationS test = createObject();
 		TranslationScope tScope = TranslationScope.get("testScope", TranslationS.class, ClassDes.class,
@@ -40,8 +40,9 @@ public class TestingMapsWithinMaps implements TestCase
 
 		TestingUtils.test(test, tScope, Format.XML);
 		TestingUtils.test(test, tScope, Format.JSON);
+		TestingUtils.test(test, tScope, Format.TLV);
 
-		TranslationScope.disableGraphSerialization();
+//		TranslationScope.disableGraphSerialization();
 
 	}
 }

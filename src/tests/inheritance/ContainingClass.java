@@ -30,18 +30,21 @@ public class ContainingClass implements TestCase
 
 		TestingUtils.test(ccb, translationScope, Format.XML);
 		TestingUtils.test(ccb, translationScope, Format.JSON);
+		TestingUtils.test(ccb, translationScope, Format.TLV);
 
 		ContainingClass cc1 = new ContainingClass();
 		cc1.theField = new ChildClass1();
 
 		TestingUtils.test(cc1, translationScope, Format.XML);
 		TestingUtils.test(cc1, translationScope, Format.JSON);
+		TestingUtils.test(cc1, translationScope, Format.TLV);
 
 		ContainingClass cc2 = new ContainingClass();
 		cc2.theField = new ChildClass2();
 
 		TestingUtils.test(cc2, translationScope, Format.XML);
 		TestingUtils.test(cc2, translationScope, Format.JSON);
+		TestingUtils.test(cc2, translationScope, Format.TLV);
 
 	}
 }

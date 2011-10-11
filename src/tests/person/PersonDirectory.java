@@ -44,5 +44,6 @@ public class PersonDirectory implements TestCase
 
 		TestingUtils.test(p, translationScope, Format.XML);
 		TestingUtils.test(p, translationScope, Format.JSON);
+		TestingUtils.test(p, translationScope, Format.TLV);
 	}
 }

@@ -57,6 +57,7 @@ public class Configuration implements TestCase
 
 		TestingUtils.test(configuration, translationScope, Format.XML);
 		TestingUtils.test(configuration, translationScope, Format.JSON);
+		TestingUtils.test(configuration, translationScope, Format.TLV);
 
 	}
 }

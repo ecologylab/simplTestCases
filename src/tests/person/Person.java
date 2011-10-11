@@ -39,6 +39,7 @@ public class Person implements TestCase, IMappable<String>
 		Person p = new Person("nabeel");
 		TestingUtils.test(p, TranslationScope.get("person", Person.class), Format.XML);
 		TestingUtils.test(p, TranslationScope.get("person", Person.class), Format.JSON);
+		TestingUtils.test(p, TranslationScope.get("person", Person.class), Format.TLV);
 	}
 
 	@Override

@@ -61,5 +61,8 @@ public class StudentDirectory implements TestCase
 				StudentDirectory.class), Format.XML);
 		TestingUtils.test(s, TranslationScope.get("studentDir", Person.class, Student.class,
 				StudentDirectory.class), Format.JSON);
+		
+		TestingUtils.test(s, TranslationScope.get("studentDir", Person.class, Student.class,
+				StudentDirectory.class), Format.TLV);
 	}
 }

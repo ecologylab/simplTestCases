@@ -8,9 +8,11 @@ import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.Format;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.simpl_collection;
+import ecologylab.serialization.annotations.simpl_nowrap;
 
 public class ScalarCollection implements TestCase
 {
+	@simpl_nowrap
 	@simpl_collection("circles")
 	private ArrayList<Integer>	collectionOfIntegers;
 
@@ -41,5 +43,6 @@ public class ScalarCollection implements TestCase
 		TestingUtils.test(sc, scalarCollectionTranslationScope, Format.XML);
 
 		TestingUtils.test(sc, scalarCollectionTranslationScope, Format.JSON);
+		TestingUtils.test(sc, scalarCollectionTranslationScope, Format.TLV);
 	}
 }

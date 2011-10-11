@@ -10,10 +10,12 @@ import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_collection;
 import ecologylab.serialization.annotations.simpl_hints;
+import ecologylab.serialization.annotations.simpl_nowrap;
 import ecologylab.serialization.annotations.simpl_scalar;
 
 public class CollectionOfCircles implements TestCase
 {
+//	@simpl_nowrap
 	@simpl_collection("circles")
 	private ArrayList<Circle>	collectionOfCircles;
 
@@ -48,5 +50,6 @@ public class CollectionOfCircles implements TestCase
 		TestingUtils.test(coc, circleTranslationScope, Format.XML);
 
 		TestingUtils.test(coc, circleTranslationScope, Format.JSON);
+		TestingUtils.test(coc, circleTranslationScope, Format.TLV);
 	}
 }

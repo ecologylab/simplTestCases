@@ -66,6 +66,7 @@ public class Container implements TestCase
 
 		TestingUtils.test(c, containerTranslationScope, Format.XML);
 		TestingUtils.test(c, containerTranslationScope, Format.JSON);
+		TestingUtils.test(c, containerTranslationScope, Format.TLV);
 
 	}
 }

@@ -78,6 +78,7 @@ public class Rss implements TestCase
 
 		TestingUtils.test(rssState, translationScope, Format.XML);
 		TestingUtils.test(rssState, translationScope, Format.JSON);
+		TestingUtils.test(rssState, translationScope, Format.TLV);
 
 	}
 }

@@ -43,5 +43,6 @@ public class Circle implements TestCase
 		TestingUtils.test(c, TranslationScope.get("circle", Circle.class, Point.class), Format.XML);
 		
 		TestingUtils.test(c, TranslationScope.get("circle", Circle.class, Point.class), Format.JSON);
+		TestingUtils.test(c, TranslationScope.get("circle", Circle.class, Point.class), Format.TLV);
 	}
 }

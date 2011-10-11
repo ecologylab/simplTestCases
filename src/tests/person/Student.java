@@ -41,5 +41,6 @@ public class Student extends Person
 		Student s = new Student("nabeel", "12343434");
 		TestingUtils.test(s, TranslationScope.get("student", Person.class, Student.class), Format.XML);
 		TestingUtils.test(s, TranslationScope.get("student", Person.class, Student.class), Format.JSON);
+		TestingUtils.test(s, TranslationScope.get("student", Person.class, Student.class), Format.TLV);
 	}
 }

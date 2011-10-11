@@ -43,5 +43,6 @@ class Faculty extends Person implements TestCase
 		Faculty f = new Faculty("andruid", "professor");
 		TestingUtils.test(f, TranslationScope.get("faculty", Person.class, Faculty.class), Format.XML);
 		TestingUtils.test(f, TranslationScope.get("faculty", Person.class, Faculty.class), Format.JSON);
+		TestingUtils.test(f, TranslationScope.get("faculty", Person.class, Faculty.class), Format.TLV);
 	}
 }
