@@ -65,6 +65,7 @@ public class Container implements TestCase
 
 		TestingUtils.test(test, translationScope, Format.XML);
 		TestingUtils.test(test, translationScope, Format.JSON);
+		TestingUtils.test(test, translationScope, Format.TLV);
 
 		TranslationScope.disableGraphSerialization();
 

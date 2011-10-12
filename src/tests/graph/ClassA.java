@@ -98,6 +98,7 @@ public class ClassA implements TestCase
 
 		TestingUtils.test(test, tScope, Format.XML);
 		TestingUtils.test(test, tScope, Format.JSON);
+		TestingUtils.test(test, tScope, Format.TLV);
 
 		TranslationScope.disableGraphSerialization();
 	}

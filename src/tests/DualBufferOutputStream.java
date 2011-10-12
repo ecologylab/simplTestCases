@@ -4,6 +4,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+/**
+ * Dual buffer to store data as string and array of bytes. 
+ * not efficient, just used to output data on console. 
+ * @author nabeel
+ */
 public class DualBufferOutputStream extends OutputStream
 {
 	private StringBuilder sb = new StringBuilder();
