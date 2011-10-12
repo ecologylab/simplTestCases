@@ -6,7 +6,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.Format;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_classes;
 import ecologylab.serialization.annotations.simpl_collection;
 import ecologylab.serialization.annotations.simpl_composite;
@@ -31,7 +31,7 @@ public class Configuration implements TestCase
 	@Override
 	public void runTest() throws SIMPLTranslationException
 	{
-		TranslationScope translationScope = TranslationScope.get("configuration", Configuration.class,
+		SimplTypesScope translationScope = SimplTypesScope.get("configuration", Configuration.class,
 				PrefInteger.class, PrefDouble.class, Pref.class);
 
 		Configuration configuration = new Configuration();

@@ -4,7 +4,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.Format;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_inherit;
 import ecologylab.serialization.annotations.simpl_scalar;
 
@@ -41,8 +41,8 @@ class Faculty extends Person implements TestCase
 	public void runTest() throws SIMPLTranslationException
 	{
 		Faculty f = new Faculty("andruid", "professor");
-		TestingUtils.test(f, TranslationScope.get("faculty", Person.class, Faculty.class), Format.XML);
-		TestingUtils.test(f, TranslationScope.get("faculty", Person.class, Faculty.class), Format.JSON);
-		TestingUtils.test(f, TranslationScope.get("faculty", Person.class, Faculty.class), Format.TLV);
+		TestingUtils.test(f, SimplTypesScope.get("faculty", Person.class, Faculty.class), Format.XML);
+		TestingUtils.test(f, SimplTypesScope.get("faculty", Person.class, Faculty.class), Format.JSON);
+		TestingUtils.test(f, SimplTypesScope.get("faculty", Person.class, Faculty.class), Format.TLV);
 	}
 }

@@ -6,7 +6,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.Format;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_classes;
 import ecologylab.serialization.annotations.simpl_collection;
 
@@ -39,7 +39,7 @@ public class PersonDirectory implements TestCase
 		PersonDirectory p = new PersonDirectory();
 		p.initializeDirectory();
 
-		TranslationScope translationScope = TranslationScope.get("personDir", Person.class,
+		SimplTypesScope translationScope = SimplTypesScope.get("personDir", Person.class,
 				Faculty.class, Student.class, PersonDirectory.class);
 
 		TestingUtils.test(p, translationScope, Format.XML);

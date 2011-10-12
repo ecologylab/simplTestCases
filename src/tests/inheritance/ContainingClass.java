@@ -4,7 +4,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.Format;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_classes;
 import ecologylab.serialization.annotations.simpl_composite;
 
@@ -22,7 +22,7 @@ public class ContainingClass implements TestCase
 	@Override
 	public void runTest() throws SIMPLTranslationException
 	{
-		TranslationScope translationScope = TranslationScope.get("test", ContainingClass.class,
+		SimplTypesScope translationScope = SimplTypesScope.get("test", ContainingClass.class,
 				ChildClass1.class, ChildClass2.class, BaseClass.class);
 
 		ContainingClass ccb = new ContainingClass();

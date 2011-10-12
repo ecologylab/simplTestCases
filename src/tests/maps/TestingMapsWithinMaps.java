@@ -4,7 +4,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.Format;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 
 public class TestingMapsWithinMaps implements TestCase
 {
@@ -35,7 +35,7 @@ public class TestingMapsWithinMaps implements TestCase
 //		TranslationScope.enableGraphSerialization();
 
 		TranslationS test = createObject();
-		TranslationScope tScope = TranslationScope.get("testScope", TranslationS.class, ClassDes.class,
+		SimplTypesScope tScope = SimplTypesScope.get("testScope", TranslationS.class, ClassDes.class,
 				FieldDes.class);
 
 		TestingUtils.test(test, tScope, Format.XML);

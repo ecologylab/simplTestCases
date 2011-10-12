@@ -6,7 +6,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.Format;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_collection;
 import ecologylab.serialization.annotations.simpl_hints;
@@ -57,12 +57,12 @@ public class StudentDirectory implements TestCase
 		StudentDirectory s = new StudentDirectory();
 		s.initializeDirectory();
 
-		TestingUtils.test(s, TranslationScope.get("studentDir", Person.class, Student.class,
+		TestingUtils.test(s, SimplTypesScope.get("studentDir", Person.class, Student.class,
 				StudentDirectory.class), Format.XML);
-		TestingUtils.test(s, TranslationScope.get("studentDir", Person.class, Student.class,
+		TestingUtils.test(s, SimplTypesScope.get("studentDir", Person.class, Student.class,
 				StudentDirectory.class), Format.JSON);
 		
-		TestingUtils.test(s, TranslationScope.get("studentDir", Person.class, Student.class,
+		TestingUtils.test(s, SimplTypesScope.get("studentDir", Person.class, Student.class,
 				StudentDirectory.class), Format.TLV);
 	}
 }

@@ -4,7 +4,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_scalar;
 
 public class Point implements TestCase
@@ -52,8 +52,8 @@ public class Point implements TestCase
 	{
 		Point p = new Point(1, 2);
 
-		TestingUtils.test(p, TranslationScope.get("point", Point.class), Format.XML);
-		TestingUtils.test(p, TranslationScope.get("point", Point.class), Format.JSON);		
-		TestingUtils.test(p, TranslationScope.get("point", Point.class), Format.TLV);
+		TestingUtils.test(p, SimplTypesScope.get("point", Point.class), Format.XML);
+		TestingUtils.test(p, SimplTypesScope.get("point", Point.class), Format.JSON);		
+		TestingUtils.test(p, SimplTypesScope.get("point", Point.class), Format.TLV);
 	}
 }

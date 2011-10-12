@@ -6,7 +6,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.Hint;
 import ecologylab.serialization.annotations.simpl_collection;
 import ecologylab.serialization.annotations.simpl_hints;
@@ -44,7 +44,7 @@ public class CollectionOfCircles implements TestCase
 		coc.addCircle(1, 2, 6);
 		coc.addCircle(1, 2, 7);
 
-		TranslationScope circleTranslationScope = TranslationScope.get("circleTScope",
+		SimplTypesScope circleTranslationScope = SimplTypesScope.get("circleTScope",
 				CollectionOfCircles.class, Circle.class, Point.class);
 
 		TestingUtils.test(coc, circleTranslationScope, Format.XML);

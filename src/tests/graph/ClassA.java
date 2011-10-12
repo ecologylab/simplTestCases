@@ -4,7 +4,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.Format;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_composite;
 import ecologylab.serialization.annotations.simpl_inherit;
 import ecologylab.serialization.annotations.simpl_scalar;
@@ -87,19 +87,19 @@ public class ClassA implements TestCase
 	@Override
 	public void runTest() throws SIMPLTranslationException
 	{
-		TranslationScope.enableGraphSerialization();
+		SimplTypesScope.enableGraphSerialization();
 
 		ClassA test = new ClassA(1, 2);
 		ClassB classB = new ClassB(3, 4, test);
 
 		test.setClassB(classB);
 
-		TranslationScope tScope = TranslationScope.get("classA", ClassA.class, ClassB.class);
+		SimplTypesScope tScope = SimplTypesScope.get("classA", ClassA.class, ClassB.class);
 
 		TestingUtils.test(test, tScope, Format.XML);
 		TestingUtils.test(test, tScope, Format.JSON);
 		TestingUtils.test(test, tScope, Format.TLV);
 
-		TranslationScope.disableGraphSerialization();
+		SimplTypesScope.disableGraphSerialization();
 	}
 }

@@ -6,7 +6,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.Format;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_collection;
 import ecologylab.serialization.annotations.simpl_nowrap;
 import ecologylab.serialization.annotations.simpl_scope;
@@ -61,7 +61,7 @@ public class Container implements TestCase
 //		TranslationScope itemTranslationScope2 = TranslationScope.get("itemScope2", ItemBase.class,
 //				ItemRandom.class, ItemTwo.class);
 
-		TranslationScope containerTranslationScope = TranslationScope.get("containerScope",
+		SimplTypesScope containerTranslationScope = SimplTypesScope.get("containerScope",
 				Container.class, ItemBase.class, ItemOne.class, ItemTwo.class, ItemRandom.class);
 
 		TestingUtils.test(c, containerTranslationScope, Format.XML);

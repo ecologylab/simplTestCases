@@ -11,7 +11,7 @@ import tests.TestingUtils;
 import ecologylab.net.ParsedURL;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.Format;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_composite;
 import ecologylab.serialization.annotations.simpl_scalar;
 
@@ -35,7 +35,7 @@ public class Rss implements TestCase
 	@Override
 	public void runTest() throws SIMPLTranslationException
 	{
-		TranslationScope translationScope = TranslationScope.get("rss", Rss.class, Channel.class,
+		SimplTypesScope translationScope = SimplTypesScope.get("rss", Rss.class, Channel.class,
 				Item.class);
 
 		Rss rssState = new Rss();

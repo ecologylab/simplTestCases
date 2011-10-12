@@ -6,7 +6,7 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.Format;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_collection;
 import ecologylab.serialization.annotations.simpl_nowrap;
 
@@ -37,7 +37,7 @@ public class ScalarCollection implements TestCase
 		sc.addInt(4);
 		sc.addInt(5);
 
-		TranslationScope scalarCollectionTranslationScope = TranslationScope.get(
+		SimplTypesScope scalarCollectionTranslationScope = SimplTypesScope.get(
 				"scalarCollectionTScope", ScalarCollection.class);
 
 		TestingUtils.test(sc, scalarCollectionTranslationScope, Format.XML);
