@@ -3,9 +3,9 @@ package tests.graph.diamond;
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.Format;
 import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_composite;
+import ecologylab.serialization.formatenums.Format;
 
 public class ClassD implements TestCase
 {

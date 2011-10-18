@@ -3,10 +3,10 @@ package tests;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
-import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.deserializers.parsers.tlv.Utils;
+import ecologylab.serialization.formatenums.Format;
 
 public class TestingUtils
 {

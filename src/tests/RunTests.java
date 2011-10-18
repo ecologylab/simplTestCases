@@ -28,8 +28,8 @@ public class RunTests
 		// composite
 		testCases.add(new Point());
 		testCases.add(new Circle());
-//
-//		// collection of composite
+
+		// collection of composite
 		testCases.add(new CollectionOfCircles());
 
 		// composite inheritence
@@ -54,6 +54,7 @@ public class RunTests
 		// scalar collection
 		testCases.add(new ScalarCollection());
 
+		// maps
 		testCases.add(new TestingMapsWithinMaps());
 	}
 

@@ -3,10 +3,10 @@ package tests.composite;
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.Format;
 import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_classes;
 import ecologylab.serialization.annotations.simpl_composite;
+import ecologylab.serialization.formatenums.Format;
 
 public class Container implements TestCase
 {

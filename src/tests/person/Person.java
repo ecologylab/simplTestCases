@@ -3,9 +3,9 @@ package tests.person;
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.Format;
 import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_scalar;
+import ecologylab.serialization.formatenums.Format;
 import ecologylab.serialization.types.element.IMappable;
 
 public class Person implements TestCase, IMappable<String>

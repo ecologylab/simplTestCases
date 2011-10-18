@@ -3,11 +3,11 @@ package tests.graph;
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.Format;
 import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_composite;
 import ecologylab.serialization.annotations.simpl_inherit;
 import ecologylab.serialization.annotations.simpl_scalar;
+import ecologylab.serialization.formatenums.Format;
 
 @simpl_inherit
 public class ClassA implements TestCase

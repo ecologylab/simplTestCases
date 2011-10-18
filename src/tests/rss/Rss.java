@@ -10,10 +10,10 @@ import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.net.ParsedURL;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.Format;
 import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_composite;
 import ecologylab.serialization.annotations.simpl_scalar;
+import ecologylab.serialization.formatenums.Format;
 
 public class Rss implements TestCase
 {
