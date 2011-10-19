@@ -2,6 +2,8 @@ package tests;
 
 import java.util.ArrayList;
 
+import tests.bibtex.Article;
+import tests.bibtex.Author;
 import tests.circle.Circle;
 import tests.circle.CollectionOfCircles;
 import tests.circle.Point;
@@ -56,6 +58,9 @@ public class RunTests
 
 		// maps
 		testCases.add(new TestingMapsWithinMaps());
+		
+		//bibtex
+		testCases.add(new Article());
 	}
 
 	public void runTestCases()
