@@ -2,6 +2,7 @@ package tests.bibtex;
 
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.SimplTypesScope;
+import ecologylab.serialization.annotations.simpl_composite_as_scalar;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.formatenums.Format;
 import tests.TestCase;
@@ -9,6 +10,7 @@ import tests.TestingUtils;
 
 public class Author implements TestCase
 {
+	@simpl_composite_as_scalar
 	@simpl_scalar
 	String name;
 	
