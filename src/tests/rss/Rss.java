@@ -2,6 +2,8 @@
 
 package tests.rss;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -14,6 +16,8 @@ import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.annotations.simpl_composite;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.formatenums.Format;
+import ecologylab.translators.cocoa.CocoaTranslationException;
+import ecologylab.translators.cocoa.CocoaTranslator;
 
 public class Rss implements TestCase
 {
@@ -37,6 +41,23 @@ public class Rss implements TestCase
 	{
 		SimplTypesScope translationScope = SimplTypesScope.get("rss", Rss.class, Channel.class,
 				Item.class);
+		
+		
+		CocoaTranslator ct = new CocoaTranslator();
+		try
+		{
+			ct.translateToObjC(new File("rss"), translationScope);
+		}
+		catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch (CocoaTranslationException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		Rss rssState = new Rss();
 		Channel channel = new Channel();

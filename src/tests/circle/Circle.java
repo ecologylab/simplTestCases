@@ -1,5 +1,8 @@
 package tests.circle;
 
+import java.io.File;
+import java.io.IOException;
+
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
@@ -9,6 +12,8 @@ import ecologylab.serialization.annotations.simpl_composite;
 import ecologylab.serialization.annotations.simpl_hints;
 import ecologylab.serialization.annotations.simpl_scalar;
 import ecologylab.serialization.formatenums.Format;
+import ecologylab.translators.cocoa.CocoaTranslationException;
+import ecologylab.translators.cocoa.CocoaTranslator;
 
 public class Circle implements TestCase
 {
@@ -39,6 +44,27 @@ public class Circle implements TestCase
 	public void runTest() throws SIMPLTranslationException
 	{
 		Circle c = new Circle(3, 2, 1);
+		
+		
+		SimplTypesScope t = SimplTypesScope.get("circleTypeScope", Circle.class, Point.class);
+		
+		CocoaTranslator ct = new CocoaTranslator();
+		try
+		{
+			ct.translateToObjC(new File("circleClasses"), t);
+		}
+		catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch (CocoaTranslationException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		SimplTypesScope.enableGraphSerialization();
 
 		TestingUtils.test(c, SimplTypesScope.get("circle", Circle.class, Point.class), Format.XML);
 		
