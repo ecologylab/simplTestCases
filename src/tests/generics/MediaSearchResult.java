@@ -1,5 +1,6 @@
 package tests.generics;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 import ecologylab.serialization.ClassDescriptor;
@@ -7,7 +8,7 @@ import ecologylab.serialization.FieldDescriptor;
 import ecologylab.serialization.GenericTypeVar;
 import ecologylab.serialization.annotations.simpl_composite;
 
-public class MediaSearchResult<M extends Media> extends SearchResult
+public class MediaSearchResult<M extends Media> extends Search<Media>
 {
 	// M media;
 	
@@ -27,17 +28,28 @@ public class MediaSearchResult<M extends Media> extends SearchResult
 		ClassDescriptor c = ClassDescriptor.getClassDescriptor(MediaSearchResult.class);
 		
 		System.out.println("generic params of class " + c.getDescribedClassName());
+		
 		print(c.getGenericTypeVars());
 		
+		System.out.println("generic params of super class of " + c.getDescribedClassName());
+		print(c.getSuperClassGenericTypeVars());
+		
+		printFieldGeneric(c);
+		
+	}
+	
+	private static void printFieldGeneric(ClassDescriptor c)
+	{
 		for(Object o : c.getAllFieldDescriptorsByTagNames().values())
 		{
 			FieldDescriptor f = (FieldDescriptor) o;
 			
 			System.out.println("generic params of field " + f.getField().getName());
-			print(f.getGenricTypeVars());
+			print(f.getGenericTypeVars());
 		}
+		
 	}
-	
+
 	public static void print(ArrayList<GenericTypeVar> vars)
 	{
 		System.out.print("[");
