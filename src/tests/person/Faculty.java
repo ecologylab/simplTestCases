@@ -41,8 +41,13 @@ class Faculty extends Person implements TestCase
 	public void runTest() throws SIMPLTranslationException
 	{
 		Faculty f = new Faculty("andruid", "professor");
-		TestingUtils.test(f, SimplTypesScope.get("faculty", Person.class, Faculty.class), Format.XML);
-		TestingUtils.test(f, SimplTypesScope.get("faculty", Person.class, Faculty.class), Format.JSON);
-		TestingUtils.test(f, SimplTypesScope.get("faculty", Person.class, Faculty.class), Format.TLV);
+		
+		SimplTypesScope translationScope = SimplTypesScope.get("facultyTScope", Person.class, Faculty.class);
+		
+		TestingUtils.generateCocoaClasses(translationScope);
+		
+		TestingUtils.test(f, translationScope, Format.XML);
+		TestingUtils.test(f, translationScope, Format.JSON);
+		TestingUtils.test(f, translationScope, Format.TLV);
 	}
 }

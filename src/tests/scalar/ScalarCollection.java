@@ -40,6 +40,9 @@ public class ScalarCollection implements TestCase
 		SimplTypesScope scalarCollectionTranslationScope = SimplTypesScope.get(
 				"scalarCollectionTScope", ScalarCollection.class);
 
+		
+		TestingUtils.generateCocoaClasses(scalarCollectionTranslationScope);
+		
 		TestingUtils.test(sc, scalarCollectionTranslationScope, Format.XML);
 
 		TestingUtils.test(sc, scalarCollectionTranslationScope, Format.JSON);

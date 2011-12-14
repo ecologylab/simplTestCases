@@ -39,8 +39,13 @@ public class Student extends Person
 	public void runTest() throws SIMPLTranslationException
 	{
 		Student s = new Student("nabeel", "12343434");
-		TestingUtils.test(s, SimplTypesScope.get("student", Person.class, Student.class), Format.XML);
-		TestingUtils.test(s, SimplTypesScope.get("student", Person.class, Student.class), Format.JSON);
-		TestingUtils.test(s, SimplTypesScope.get("student", Person.class, Student.class), Format.TLV);
+		
+		SimplTypesScope translationScope = SimplTypesScope.get("studentTScope", Person.class, Student.class);
+		
+		TestingUtils.generateCocoaClasses(translationScope);
+		
+		TestingUtils.test(s, translationScope, Format.XML);
+		TestingUtils.test(s, translationScope, Format.JSON);
+		TestingUtils.test(s, translationScope, Format.TLV);
 	}
 }

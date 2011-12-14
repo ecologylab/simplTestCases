@@ -35,9 +35,12 @@ public class TestingMapsWithinMaps implements TestCase
 //		TranslationScope.enableGraphSerialization();
 
 		TranslationS test = createObject();
-		SimplTypesScope tScope = SimplTypesScope.get("testScope", TranslationS.class, ClassDes.class,
+		SimplTypesScope tScope = SimplTypesScope.get("testingMapWithinMapsTScope", TranslationS.class, ClassDes.class,
 				FieldDes.class);
 
+		
+		TestingUtils.generateCocoaClasses(tScope);
+		
 		TestingUtils.test(test, tScope, Format.XML);
 		TestingUtils.test(test, tScope, Format.JSON);
 		TestingUtils.test(test, tScope, Format.TLV);

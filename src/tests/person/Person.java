@@ -37,9 +37,14 @@ public class Person implements TestCase, IMappable<String>
 	public void runTest() throws SIMPLTranslationException
 	{
 		Person p = new Person("nabeel");
-		TestingUtils.test(p, SimplTypesScope.get("person", Person.class), Format.XML);
-		TestingUtils.test(p, SimplTypesScope.get("person", Person.class), Format.JSON);
-		TestingUtils.test(p, SimplTypesScope.get("person", Person.class), Format.TLV);
+		
+		SimplTypesScope translationScope = SimplTypesScope.get("personTScope", Person.class);
+		
+		TestingUtils.generateCocoaClasses(translationScope);
+		
+		TestingUtils.test(p, translationScope, Format.XML);
+		TestingUtils.test(p, translationScope, Format.JSON);
+		TestingUtils.test(p, translationScope, Format.TLV);
 	}
 
 	@Override

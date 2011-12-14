@@ -54,9 +54,11 @@ public class ClassD implements TestCase
 		ClassC classC = new ClassC();
 		ClassD test = new ClassD(new ClassA(classC), new ClassB(classC));
 
-		SimplTypesScope tScope = SimplTypesScope.get("classD", ClassA.class, ClassB.class,
+		SimplTypesScope tScope = SimplTypesScope.get("classDTScope", ClassA.class, ClassB.class,
 				ClassC.class, ClassD.class, ClassX.class);
 
+		TestingUtils.generateCocoaClasses(tScope);
+		
 		TestingUtils.test(test, tScope, Format.XML);
 		TestingUtils.test(test, tScope, Format.JSON);
 		TestingUtils.test(test, tScope, Format.TLV);

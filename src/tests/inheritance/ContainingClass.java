@@ -22,7 +22,7 @@ public class ContainingClass implements TestCase
 	@Override
 	public void runTest() throws SIMPLTranslationException
 	{
-		SimplTypesScope translationScope = SimplTypesScope.get("test", ContainingClass.class,
+		SimplTypesScope translationScope = SimplTypesScope.get("containingClassTScope", ContainingClass.class,
 				ChildClass1.class, ChildClass2.class, BaseClass.class);
 
 		ContainingClass ccb = new ContainingClass();
@@ -42,6 +42,8 @@ public class ContainingClass implements TestCase
 		ContainingClass cc2 = new ContainingClass();
 		cc2.theField = new ChildClass2();
 
+		TestingUtils.generateCocoaClasses(translationScope);
+		
 		TestingUtils.test(cc2, translationScope, Format.XML);
 		TestingUtils.test(cc2, translationScope, Format.JSON);
 		TestingUtils.test(cc2, translationScope, Format.TLV);

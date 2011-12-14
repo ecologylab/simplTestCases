@@ -60,9 +60,11 @@ public class Container implements TestCase
 		SimplTypesScope.enableGraphSerialization();
 
 		Container test = new Container().initializeInstance();
-		SimplTypesScope translationScope = SimplTypesScope.get("testcollection", Container.class,
+		SimplTypesScope translationScope = SimplTypesScope.get("containerTScope", Container.class,
 				ClassA.class);
 
+		TestingUtils.generateCocoaClasses(translationScope);
+		
 		TestingUtils.test(test, translationScope, Format.XML);
 		TestingUtils.test(test, translationScope, Format.JSON);
 		TestingUtils.test(test, translationScope, Format.TLV);

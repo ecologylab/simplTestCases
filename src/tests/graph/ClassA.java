@@ -94,7 +94,9 @@ public class ClassA implements TestCase
 
 		test.setClassB(classB);
 
-		SimplTypesScope tScope = SimplTypesScope.get("classA", ClassA.class, ClassB.class);
+		SimplTypesScope tScope = SimplTypesScope.get("classATScope", ClassA.class, ClassB.class);
+		
+		TestingUtils.generateCocoaClasses(tScope);
 
 		TestingUtils.test(test, tScope, Format.XML);
 		TestingUtils.test(test, tScope, Format.JSON);

@@ -57,12 +57,13 @@ public class StudentDirectory implements TestCase
 		StudentDirectory s = new StudentDirectory();
 		s.initializeDirectory();
 
-		TestingUtils.test(s, SimplTypesScope.get("studentDir", Person.class, Student.class,
-				StudentDirectory.class), Format.XML);
-		TestingUtils.test(s, SimplTypesScope.get("studentDir", Person.class, Student.class,
-				StudentDirectory.class), Format.JSON);
+		SimplTypesScope translationScope = SimplTypesScope.get("studentDirectoryTScope", Person.class, Student.class,
+				StudentDirectory.class);
 		
-		TestingUtils.test(s, SimplTypesScope.get("studentDir", Person.class, Student.class,
-				StudentDirectory.class), Format.TLV);
+		TestingUtils.generateCocoaClasses(translationScope);
+		
+		TestingUtils.test(s, translationScope, Format.XML);
+		TestingUtils.test(s, translationScope, Format.JSON);		
+		TestingUtils.test(s, translationScope, Format.TLV);
 	}
 }

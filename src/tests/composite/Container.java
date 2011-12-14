@@ -31,6 +31,8 @@ public class Container implements TestCase
 
 		SimplTypesScope containerTest = SimplTypesScope.get("containerTranslationscope",
 				Container.class, WCBase.class, WCSubOne.class, WCSubTwo.class);
+		
+		TestingUtils.generateCocoaClasses(containerTest);
 
 		TestingUtils.test(c, containerTest, Format.XML);
 		TestingUtils.test(c, containerTest, Format.JSON);

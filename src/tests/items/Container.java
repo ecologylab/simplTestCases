@@ -61,9 +61,11 @@ public class Container implements TestCase
 //		TranslationScope itemTranslationScope2 = TranslationScope.get("itemScope2", ItemBase.class,
 //				ItemRandom.class, ItemTwo.class);
 
-		SimplTypesScope containerTranslationScope = SimplTypesScope.get("containerScope",
+		SimplTypesScope containerTranslationScope = SimplTypesScope.get("containerTScope",
 				Container.class, ItemBase.class, ItemOne.class, ItemTwo.class, ItemRandom.class);
 
+		TestingUtils.generateCocoaClasses(containerTranslationScope);
+		
 		TestingUtils.test(c, containerTranslationScope, Format.XML);
 		TestingUtils.test(c, containerTranslationScope, Format.JSON);
 		TestingUtils.test(c, containerTranslationScope, Format.TLV);

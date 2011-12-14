@@ -39,9 +39,11 @@ public class PersonDirectory implements TestCase
 		PersonDirectory p = new PersonDirectory();
 		p.initializeDirectory();
 
-		SimplTypesScope translationScope = SimplTypesScope.get("personDir", Person.class,
+		SimplTypesScope translationScope = SimplTypesScope.get("personDirectoryTScope", Person.class,
 				Faculty.class, Student.class, PersonDirectory.class);
 
+		TestingUtils.generateCocoaClasses(translationScope);
+		
 		TestingUtils.test(p, translationScope, Format.XML);
 		TestingUtils.test(p, translationScope, Format.JSON);
 		TestingUtils.test(p, translationScope, Format.TLV);

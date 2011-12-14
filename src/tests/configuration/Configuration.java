@@ -31,7 +31,7 @@ public class Configuration implements TestCase
 	@Override
 	public void runTest() throws SIMPLTranslationException
 	{
-		SimplTypesScope translationScope = SimplTypesScope.get("configuration", Configuration.class,
+		SimplTypesScope translationScope = SimplTypesScope.get("configurationTScope", Configuration.class,
 				PrefInteger.class, PrefDouble.class, Pref.class);
 
 		Configuration configuration = new Configuration();
@@ -55,6 +55,8 @@ public class Configuration implements TestCase
 		configuration.pref = prefInteger;
 		configuration.prefs = prefList;
 
+		TestingUtils.generateCocoaClasses(translationScope);
+		
 		TestingUtils.test(configuration, translationScope, Format.XML);
 		TestingUtils.test(configuration, translationScope, Format.JSON);
 		TestingUtils.test(configuration, translationScope, Format.TLV);

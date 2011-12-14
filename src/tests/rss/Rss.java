@@ -39,7 +39,7 @@ public class Rss implements TestCase
 	@Override
 	public void runTest() throws SIMPLTranslationException
 	{
-		SimplTypesScope translationScope = SimplTypesScope.get("rss", Rss.class, Channel.class,
+		SimplTypesScope translationScope = SimplTypesScope.get("rssTScope", Rss.class, Channel.class,
 				Item.class);
 
 		TestingUtils.generateCocoaClasses(translationScope);
