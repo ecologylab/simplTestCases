@@ -60,7 +60,7 @@ public class RunTests
 		testCases.add(new TestingMapsWithinMaps());
 		
 		//bibtex
-		testCases.add(new Article());
+		testCases.add(new Article()); 
 	}
 
 	public void runTestCases()
