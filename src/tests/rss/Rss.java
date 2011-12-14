@@ -41,23 +41,8 @@ public class Rss implements TestCase
 	{
 		SimplTypesScope translationScope = SimplTypesScope.get("rss", Rss.class, Channel.class,
 				Item.class);
-		
-		
-		CocoaTranslator ct = new CocoaTranslator();
-		try
-		{
-			ct.translateToObjC(new File("rss"), translationScope);
-		}
-		catch (IOException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		catch (CocoaTranslationException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+		TestingUtils.generateCocoaClasses(translationScope);
 
 		Rss rssState = new Rss();
 		Channel channel = new Channel();
@@ -70,7 +55,7 @@ public class Rss implements TestCase
 
 		channel.title = "testTitle";
 		channel.description = "testDescription";
-		
+
 		try
 		{
 			channel.link = new ParsedURL(new URL("http://www.google.com"));

@@ -46,23 +46,9 @@ public class Circle implements TestCase
 		Circle c = new Circle(3, 2, 1);
 		
 		
-		SimplTypesScope t = SimplTypesScope.get("circleTypeScope", Circle.class, Point.class);
+		SimplTypesScope t = SimplTypesScope.get("circleTScope", Circle.class, Point.class);
 		
-		CocoaTranslator ct = new CocoaTranslator();
-		try
-		{
-			ct.translateToObjC(new File("circleClasses"), t);
-		}
-		catch (IOException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		catch (CocoaTranslationException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		TestingUtils.generateCocoaClasses(t);
 		
 		SimplTypesScope.enableGraphSerialization();
 

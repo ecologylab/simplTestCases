@@ -51,9 +51,12 @@ public class Point implements TestCase
 	public void runTest() throws SIMPLTranslationException
 	{
 		Point p = new Point(1, 2);
-
-		TestingUtils.test(p, SimplTypesScope.get("point", Point.class), Format.XML);
-		TestingUtils.test(p, SimplTypesScope.get("point", Point.class), Format.JSON);		
-		TestingUtils.test(p, SimplTypesScope.get("point", Point.class), Format.TLV);
+		SimplTypesScope scope = SimplTypesScope.get("pointTScope", Point.class);
+		
+		TestingUtils.generateCocoaClasses(scope);
+		
+		TestingUtils.test(p, scope, Format.XML);
+		TestingUtils.test(p, scope, Format.JSON);		
+		TestingUtils.test(p, scope, Format.TLV);
 	}
 }

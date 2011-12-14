@@ -44,8 +44,11 @@ public class CollectionOfCircles implements TestCase
 		coc.addCircle(1, 2, 6);
 		coc.addCircle(1, 2, 7);
 
-		SimplTypesScope circleTranslationScope = SimplTypesScope.get("circleTScope",
+		SimplTypesScope circleTranslationScope = SimplTypesScope.get("collectionOfCirclesTScope",
 				CollectionOfCircles.class, Circle.class, Point.class);
+		
+		
+		TestingUtils.generateCocoaClasses(circleTranslationScope);
 
 		TestingUtils.test(coc, circleTranslationScope, Format.XML);
 

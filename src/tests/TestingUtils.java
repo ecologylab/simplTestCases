@@ -1,12 +1,16 @@
 package tests;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.deserializers.parsers.tlv.Utils;
 import ecologylab.serialization.formatenums.Format;
+import ecologylab.translators.cocoa.CocoaTranslationException;
+import ecologylab.translators.cocoa.CocoaTranslator;
 
 public class TestingUtils
 {
@@ -37,6 +41,25 @@ public class TestingUtils
 				format);
 
 		System.out.println();
+	}
+	
+	public static void generateCocoaClasses(SimplTypesScope typeScope) throws SIMPLTranslationException
+	{
+		CocoaTranslator ct = new CocoaTranslator();
+		try
+		{
+			ct.translateToObjC(new File("TestCases"), typeScope);
+		}
+		catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch (CocoaTranslationException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public static void printOutput(DualBufferOutputStream outputStream, Format format)
