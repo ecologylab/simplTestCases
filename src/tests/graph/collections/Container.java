@@ -63,7 +63,7 @@ public class Container implements TestCase
 		SimplTypesScope translationScope = SimplTypesScope.get("containerTScope", Container.class,
 				ClassA.class);
 
-		TestingUtils.generateCocoaClasses(translationScope);
+//		TestingUtils.generateCocoaClasses(translationScope);
 		
 		TestingUtils.test(test, translationScope, Format.XML);
 		TestingUtils.test(test, translationScope, Format.JSON);

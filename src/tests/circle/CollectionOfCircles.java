@@ -48,7 +48,7 @@ public class CollectionOfCircles implements TestCase
 				CollectionOfCircles.class, Circle.class, Point.class);
 		
 		
-		TestingUtils.generateCocoaClasses(circleTranslationScope);
+//		TestingUtils.generateCocoaClasses(circleTranslationScope);
 
 		TestingUtils.test(coc, circleTranslationScope, Format.XML);
 

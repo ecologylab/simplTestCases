@@ -48,7 +48,7 @@ public class Circle implements TestCase
 		
 		SimplTypesScope t = SimplTypesScope.get("circleTScope", Circle.class, Point.class);
 		
-		TestingUtils.generateCocoaClasses(t);
+//		TestingUtils.generateCocoaClasses(t);
 		
 		SimplTypesScope.enableGraphSerialization();
 

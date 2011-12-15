@@ -53,7 +53,7 @@ public class Point implements TestCase
 		Point p = new Point(1, 2);
 		SimplTypesScope scope = SimplTypesScope.get("pointTScope", Point.class);
 		
-		TestingUtils.generateCocoaClasses(scope);
+//		TestingUtils.generateCocoaClasses(scope);
 		
 		TestingUtils.test(p, scope, Format.XML);
 		TestingUtils.test(p, scope, Format.JSON);		

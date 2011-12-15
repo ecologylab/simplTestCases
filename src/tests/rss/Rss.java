@@ -42,7 +42,7 @@ public class Rss implements TestCase
 		SimplTypesScope translationScope = SimplTypesScope.get("rssTScope", Rss.class, Channel.class,
 				Item.class);
 
-		TestingUtils.generateCocoaClasses(translationScope);
+//		TestingUtils.generateCocoaClasses(translationScope);
 
 		Rss rssState = new Rss();
 		Channel channel = new Channel();
