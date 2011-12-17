@@ -1,6 +1,5 @@
 package tests.generics;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 import ecologylab.serialization.ClassDescriptor;
@@ -8,7 +7,7 @@ import ecologylab.serialization.FieldDescriptor;
 import ecologylab.serialization.GenericTypeVar;
 import ecologylab.serialization.annotations.simpl_composite;
 
-public class MediaSearchResult<M extends Media> extends Search<Media>
+public class MediaSearchResult<M extends Media> extends Search<M>
 {
 	// M media;
 	
