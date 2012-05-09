@@ -5,5 +5,6 @@
 	<classpathentry kind="src" path="/ecologylabFundamental"/>
 	<classpathentry kind="src" path="/simplTranslators"/>
 	<classpathentry kind="src" path="/ecologylabSemantics"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -6,59 +6,61 @@ import ecologylab.serialization.ClassDescriptor;
 import ecologylab.serialization.FieldDescriptor;
 import ecologylab.serialization.GenericTypeVar;
 import ecologylab.serialization.annotations.simpl_composite;
+import ecologylab.serialization.annotations.simpl_inherit;
 
-public class MediaSearchResult<M extends Media> extends Search<M>
+@simpl_inherit
+public class MediaSearchResult<M extends Media> extends SearchResult
 {
-	// M media;
-	
-	@simpl_composite
-	public MediaSearch<M, MediaSearchResult<? extends Media>>	ms;
 
 	@simpl_composite
-	public MediaSearchResult<Media>									msr;
+	M																											media;
 
-	public MediaSearchResult()
-	{
-		// TODO Auto-generated constructor stub
-	}
+	@simpl_composite
+	public MediaSearch<M, MediaSearchResult<? extends M>>	ms;
 
-	public static void main(String args[])
-	{
-		ClassDescriptor c = ClassDescriptor.getClassDescriptor(MediaSearchResult.class);
-		
-		System.out.println("generic params of class " + c.getDescribedClassName());
-		
-		print(c.getGenericTypeVars());
-		
-		System.out.println("generic params of super class of " + c.getDescribedClassName());
-		print(c.getSuperClassGenericTypeVars());
-		
-		printFieldGeneric(c);
-		
-	}
+//	public MediaSearchResult()
+//	{
+//		// TODO Auto-generated constructor stub
+//	}
+//
+//	public static void main(String args[])
+//	{
+//		ClassDescriptor c = ClassDescriptor.getClassDescriptor(MediaSearchResult.class);
+//
+//		System.out.println("generic params of class " + c.getDescribedClassName());
+//
+//		print(c.getGenericTypeVars());
+//
+//		System.out.println("generic params of super class of " + c.getDescribedClassName());
+//		print(c.getSuperClassGenericTypeVars());
+//
+//		printFieldGeneric(c);
+//
+//	}
+//
+//	private static void printFieldGeneric(ClassDescriptor c)
+//	{
+//		for (Object o : c.getAllFieldDescriptorsByTagNames().values())
+//		{
+//			FieldDescriptor f = (FieldDescriptor) o;
+//
+//			System.out.println("generic params of field " + f.getField().getName());
+//			print(f.getGenericTypeVars());
+//		}
+//
+//	}
+//
+//	public static void print(ArrayList<GenericTypeVar> vars)
+//	{
+//		System.out.print("[");
+//		int i = 0;
+//		for (GenericTypeVar g : vars)
+//		{
+//			if (i++ > 0)
+//				System.out.print(", ");
+//			System.out.print(g);
+//		}
+//		System.out.println("]");
+//	}
 	
-	private static void printFieldGeneric(ClassDescriptor c)
-	{
-		for(Object o : c.getAllFieldDescriptorsByTagNames().values())
-		{
-			FieldDescriptor f = (FieldDescriptor) o;
-			
-			System.out.println("generic params of field " + f.getField().getName());
-			print(f.getGenericTypeVars());
-		}
-		
-	}
-
-	public static void print(ArrayList<GenericTypeVar> vars)
-	{
-		System.out.print("[");
-		int i = 0;
-		for (GenericTypeVar g : vars)
-		{
-			if (i++ > 0)
-				System.out.print(", ");
-			System.out.print(g);
-		}
-		System.out.println("]");
-	}
 }
