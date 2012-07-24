@@ -62,7 +62,7 @@ public class TestingUtils
 		}
 	}
 	
-	public static void serializeSimplTypeScope(SimplTypesScope scope, Format format) throws SIMPLTranslationException
+	public static void serializeSimplTypesScope(SimplTypesScope scope, Format format) throws SIMPLTranslationException
 	{
 		DualBufferOutputStream outputStream = new DualBufferOutputStream();
 		testSerailization(scope, outputStream, format);	
