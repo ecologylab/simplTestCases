@@ -41,6 +41,9 @@ public class TestingMapsWithinMaps implements TestCase
 		
 		TestingUtils.generateCocoaClasses(tScope);
 		
+		SimplTypesScope.enableGraphSerialization();
+		TestingUtils.serializeSimplTypesScope(tScope, "testingMapWithinMapsTScope",  Format.JSON);
+		
 		TestingUtils.test(test, tScope, Format.XML);
 		TestingUtils.test(test, tScope, Format.JSON);
 		TestingUtils.test(test, tScope, Format.TLV);

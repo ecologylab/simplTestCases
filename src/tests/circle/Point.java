@@ -55,7 +55,8 @@ public class Point implements TestCase
 		
 //		TestingUtils.generateCocoaClasses(scope);
 		
-		TestingUtils.serializeSimplTypesScope(scope, Format.JSON);
+		SimplTypesScope.enableGraphSerialization();
+		TestingUtils.serializeSimplTypesScope(scope, "Point", Format.JSON);
 		
 		TestingUtils.test(p, scope, Format.XML);
 		TestingUtils.test(p, scope, Format.JSON);		

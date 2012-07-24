@@ -2,6 +2,7 @@ package tests;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -62,10 +63,25 @@ public class TestingUtils
 		}
 	}
 	
-	public static void serializeSimplTypesScope(SimplTypesScope scope, Format format) throws SIMPLTranslationException
+	public static void serializeSimplTypesScope(SimplTypesScope scope, String fileName, Format format) throws SIMPLTranslationException
 	{
 		DualBufferOutputStream outputStream = new DualBufferOutputStream();
-		testSerailization(scope, outputStream, format);	
+		SimplTypesScope.serialize(scope, outputStream, format);
+
+		if (format ==  Format.JSON)
+			fileName += ".json";
+		else
+			fileName += ".xml";
+		try
+		{
+			FileWriter fstream = new FileWriter(fileName);
+			fstream.write(outputStream.toString());
+			fstream.close();
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	public static void printOutput(DualBufferOutputStream outputStream, Format format)
