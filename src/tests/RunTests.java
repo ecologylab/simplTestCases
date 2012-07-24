@@ -13,6 +13,7 @@ import tests.graph.ClassB;
 import tests.graph.collections.Container;
 import tests.graph.diamond.ClassD;
 import tests.maps.TestingMapsWithinMaps;
+import tests.net.ParsedURLMapTest;
 import tests.person.Faculty;
 import tests.person.Person;
 import tests.person.PersonDirectory;
@@ -60,7 +61,10 @@ public class RunTests
 		testCases.add(new TestingMapsWithinMaps());
 		
 		//bibtex
-		testCases.add(new Article()); 
+		testCases.add(new Article());
+		
+		//parsedurl
+		testCases.add(new ParsedURLMapTest());
 	}
 
 	public void runTestCases()
