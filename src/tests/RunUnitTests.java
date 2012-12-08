@@ -22,6 +22,9 @@ import tests.person.PersonDirectory;
 import tests.person.Student;
 import tests.person.StudentDirectory;
 import tests.rss.Rss;
+import tests.scalar.Enum;
+import tests.scalar.EnumCollection;
+import tests.scalar.EnumOfFieldUsageCollection;
 import tests.scalar.ScalarCollection;
 
 public class RunUnitTests
@@ -84,8 +87,23 @@ public class RunUnitTests
 	@Test
 	public void scalarCollectionTest()
 	{
+		runTestCase(new Enum());
 		runTestCase(new ScalarCollection());
+		
 	}
+	
+	@Test
+	public void scalarCollectionEnum()
+	{
+		runTestCase(new EnumCollection());
+	}
+	
+	@Test
+	public void scalarCollectionEnumFieldUseage()
+	{
+		runTestCase(new EnumOfFieldUsageCollection());
+	}	
+	
 	
 	@Test
 	public void mapsTest()
