@@ -49,7 +49,7 @@ public class TestingUtils
 		CocoaTranslator ct = new CocoaTranslator();
 		try
 		{
-			ct.translateToObjC(new File("/Users/nskhan84/Desktop/TestCases"), typeScope);
+			ct.translateToObjC(new File("TestCases"), typeScope);
 		}
 		catch (IOException e)
 		{

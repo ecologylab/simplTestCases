@@ -21,9 +21,6 @@ import ecologylab.serialization.formatenums.Format;
 import ecologylab.serialization.library.rss.Channel;
 import ecologylab.serialization.library.rss.Item;
 import ecologylab.serialization.library.rss.RssState;
-import ecologylab.standalone.xmlpolymorph.BItem;
-import ecologylab.standalone.xmlpolymorph.SchmItem;
-import ecologylab.standalone.xmlpolymorph.Schmannel;
 import ecologylab.translators.CodeTranslationException;
 import ecologylab.translators.cocoa.CocoaTranslationException;
 import ecologylab.translators.cocoa.CocoaTranslator;
@@ -79,8 +76,7 @@ extends Debug
 	private static void testSerializationWithPolymorph(String filename) throws Exception
 	{
 		println("testSerializationWithPolymorph("+filename);
-		SimplTypesScope ts2 = SimplTypesScope.get("RSSTranslations", Schmannel.class, BItem.class,
-				SchmItem.class, RssState.class, Item.class, Channel.class);
+		SimplTypesScope ts2 = SimplTypesScope.get("RSSTranslations", RssState.class, Item.class, Channel.class);
 		SimplTypesScope.enableGraphSerialization();
 		SimplTypesScope.serialize(ts2, new File(filename), Format.XML);
 	}
