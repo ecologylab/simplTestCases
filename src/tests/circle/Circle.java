@@ -3,6 +3,8 @@ package tests.circle;
 import java.io.File;
 import java.io.IOException;
 
+import tests.SimplTestCase;
+import tests.SimplTestObject;
 import tests.TestCase;
 import tests.TestingUtils;
 import ecologylab.serialization.SIMPLTranslationException;
@@ -15,7 +17,7 @@ import ecologylab.serialization.formatenums.Format;
 import ecologylab.translators.cocoa.CocoaTranslationException;
 import ecologylab.translators.cocoa.CocoaTranslator;
 
-public class Circle implements TestCase
+public class Circle implements TestCase,SimplTestCase
 {
 	@simpl_hints(Hint.XML_LEAF)
 	@simpl_scalar
@@ -56,5 +58,13 @@ public class Circle implements TestCase
 		
 		TestingUtils.test(c, SimplTypesScope.get("circle", Circle.class, Point.class), Format.JSON);
 		TestingUtils.test(c, SimplTypesScope.get("circle", Circle.class, Point.class), Format.TLV);
+	}
+
+	@Override
+	public SimplTestObject getTestObject() {
+		Circle c = new Circle(3, 2, 1);
+		SimplTypesScope t = SimplTypesScope.get("circleTScope", Circle.class, Point.class);
+		SimplTestObject sto = new SimplTestObject("circle",c,t);
+		return sto;
 	}
 }
