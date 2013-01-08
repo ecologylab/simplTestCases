@@ -182,7 +182,7 @@ public class JSONPullDeserializerTest extends Assert
    * 
    * @throws SIMPLTranslationException
    */
-  @Test
+  @Test(timeout = 1000)
   public void deSerializeEmptyCollectionOfScalarsJSON() throws SIMPLTranslationException
   {
     item1.addAlias(null);
